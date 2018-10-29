@@ -1,2 +1,15 @@
 <h1> Hello from the workout index page </h1>
-<h2> Lets track that most recent workout you did you stud! <a href="workouts/new">Click here </a>
+<h2> Here is the list of your workouts </h2>
+
+<% @workouts.each do |workout| %>
+  <p>You completed this workout on<%= workout.date %></p>
+  <p>You were at <%= workout.location %> when you cranked those weights boiiiii</p>
+  <p> The goals you set were: "<%= workout.goals %>" for your next workout </p>
+  <p> You described the workout as <%= workout.review %> </p>
+<% end %>
+
+
+<br>
+<br>
+
+<a href="workouts/new"><button  class="new-workout-button" href="workouts/new"> Lets track that most recent workout you did you stud!</button></a>

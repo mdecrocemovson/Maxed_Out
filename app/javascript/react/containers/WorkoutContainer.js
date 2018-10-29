@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormContainer from './FormContainer'
 
 class WorkoutContainer extends Component {
   constructor (props) {
@@ -10,8 +11,14 @@ class WorkoutContainer extends Component {
   render() {
     return (
       <div>
+      <div className="holley">
+        <h1>Lets go!</h1>
+        <h1>Lift some weights!</h1>
+      </div>
+      <div>
         <h1> Hello from the Workout Form! </h1>
         <FormContainer />
+      </div>
       </div>
     )
   }
