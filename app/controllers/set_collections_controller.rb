@@ -1,0 +1,2 @@
+class SetCollectionsController < ApplicationController
+end

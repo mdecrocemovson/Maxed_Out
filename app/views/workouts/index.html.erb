@@ -1,10 +1,14 @@
-<h2 class="index-logo"> Here is the list of your workouts </h2>
+
+<% current_user_email_array = current_user.email.split("@") %>
+<% current_user_name = current_user_email_array[0]%>
+<h2 class="index-logo"> Here is the list of your workouts <%= current_user_name %></h2>
 
 <a href="workouts/new"><button  class="new-workout-button" href="workouts/new"> Lets track that most recent workout you did you stud!</button></a>
 <br>
+<br>
 <% counter = 1 %>
 <% @workouts.each do |workout| %>
-  <h3 class="workout-counter">Workout #<%= counter %> </h3>
+    <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout #<%= counter %> (click to add sets/info)</h3></a>
   <br>
   <% counter += 1 %>
   <% if workout.user_id = current_user.id %>
@@ -13,6 +17,7 @@
     <p> The goal you set were: "<%= workout.goal %>" for your next workout </p>
     <p> You described the workout as <%= workout.review %> </p>
     <% end %>
+  <br>
   <br>
 <% end %>
 
