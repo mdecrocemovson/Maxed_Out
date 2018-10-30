@@ -16,7 +16,8 @@ class WorkoutShow extends Component {
       date: "",
       location: "",
       review: "",
-      goal: ""
+      goal: "",
+      exercises: []
     }
   }
 
@@ -38,7 +39,7 @@ class WorkoutShow extends Component {
   }
 
   render() {
-    // debugger
+    console.log(this.state)
     return (
       <div>
 
@@ -48,8 +49,10 @@ class WorkoutShow extends Component {
           review = {this.state.review}
           goal = {this.state.goal}
           />
-        <a href={`/workouts/${this.state.workout_id}/set_collections/new`}><button id="add_sets">Let's add some damn sets and reps to this why don't we??</button></a>
-        <SetCollectionForm />
+        <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
+        <SetCollectionForm
+          workout_id = {this.state.workout_id}
+          />
       </div>
     )
   }

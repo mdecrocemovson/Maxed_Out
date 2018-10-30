@@ -47,8 +47,10 @@ class WorkoutContainer extends Component {
     })
     .then (response => response.json())
     .then(body => {
+
       this.notify()
       this.setState({workout: body})
+      browserHistory.push(`/workouts/${body.id}`)
     })
   }
 
