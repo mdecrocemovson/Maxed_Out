@@ -4,9 +4,10 @@ const TextField = (props) => {
   return (
     <div>
     <input
-      type="text"
+      type={props.type}
       className="textField"
-      name="workout"
+      onChange = {props.handleChange}
+      value = {props.content}
       />
   </div>
   )

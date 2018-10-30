@@ -4,7 +4,7 @@ class AddWorkouts < ActiveRecord::Migration[5.2]
       t.belongs_to :user, null:false
       t.date :date, null:false
       t.string :location, null:false
-      t.string :goals, null:false
+      t.string :goal, null:false
       t.string :review
 
       t.timestamps

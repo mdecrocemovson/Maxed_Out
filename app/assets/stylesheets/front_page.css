@@ -1,6 +1,6 @@
 .holley {
   background-image:url('holley_mangold.jpg');
-  color: green;
+  color: white;
   background-repeat: space;
   background-position: center;
   text-align: center;
@@ -22,4 +22,20 @@
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 20px;
+}
+
+body {
+  background-color: #202020;
+  color: white;
+  padding-left: 10px;
+}
+
+.workout-counter {
+  color:#6BACBF;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.index-logo {
+  color: #9DBCBC;
+  font-family: 'Hammersmith One', sans-serif;
 }
