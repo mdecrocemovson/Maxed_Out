@@ -1,11 +1,11 @@
 <div class="user-div">
-  <h2> Your information </h2>
-  <h4 class="user.email"> <%= @user.email %> </h4>
-  <p class="user-time">Created on: <%= @user.created_at.month  %>/<%= @user.created_at.day %>/<%= @user.created_at.year %></p>
+  <h2 class="user-info"> Your information </h2>
+  <h4 class="user-info"> <%= @user.email %> </h4>
+  <p class="user-info user-time">Created on: <%= @user.created_at.month  %>/<%= @user.created_at.day %>/<%= @user.created_at.year %></p>
 
-  <h2> Your maxes! </h2>
-  <h3> Squat: <%=@user.max_squat%> </h3>
-  <h3> Bench: <%=@user.max_bench_press%> </h3>
-  <h3> Deadlift: <%=@user.max_dead_lift%> </h3>
+  <h2 class="user-info"> Your maxes! </h2>
+  <h3 class="user-info user-lifts"> Squat: <%=@user.max_squat%> </h3>
+  <h3 class="user-info user-lifts"> Bench: <%=@user.max_bench_press%> </h3>
+  <h3 class="user-info user-lifts"> Deadlift: <%=@user.max_dead_lift%> </h3>
 
 </div>
