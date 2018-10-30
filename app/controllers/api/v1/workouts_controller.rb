@@ -9,6 +9,13 @@ class Api::V1::WorkoutsController < ApiController
     end
   end
 
+  def show
+    workout = Workout.find(params[:id])
+    render json: workout
+  end
+
+  private
+
   def workout_params
     params.require(:workout).permit(:user_id, :date, :location, :goal, :review).merge(user_id: current_user.id)
   end

@@ -3,6 +3,7 @@ import FormContainer from './FormContainer'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 
+
 class WorkoutContainer extends Component {
   constructor (props) {
     super(props);
@@ -63,6 +64,7 @@ class WorkoutContainer extends Component {
         <FormContainer
           addWorkout = {this.addWorkout}
           />
+          <img className="dost-thou" src="https://i.kym-cdn.com/photos/images/original/000/428/258/e29.jpg"/>
       </div>
 
       <ToastContainer
