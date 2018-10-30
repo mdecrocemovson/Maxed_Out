@@ -1,0 +1,41 @@
+.holley {
+  background-image:url('holley_mangold.jpg');
+  color: white;
+  background-repeat: space;
+  background-position: center;
+  text-align: center;
+}
+
+.workout-form {
+  padding-left: 2%;
+}
+
+.new-workout-button {
+    border: 2px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+}
+
+body {
+  background-color: #202020;
+  color: white;
+  padding-left: 10px;
+}
+
+.workout-counter {
+  color:#6BACBF;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.index-logo {
+  color: #9DBCBC;
+  font-family: 'Hammersmith One', sans-serif;
+}
