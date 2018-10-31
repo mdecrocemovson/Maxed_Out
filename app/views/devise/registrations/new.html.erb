@@ -4,45 +4,42 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, class: "user-info"%><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <%= f.label :password, class: "user-info" %> <br/>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, class: "user-info" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :height, "Height (in inches, this is america damnit)" %><br />
+    <%= f.label :height, "Height (in inches, this is america damnit)", class: "user-info" %><br />
     <%= f.text_field :height %>
   </div>
 
   <div class="field">
-    <%= f.label :weight, "Weight in lbs, no commies allowed" %><br />
+    <%= f.label :weight, "Weight in lbs, no commies allowed", class: "user-info" %><br />
     <%= f.text_field :weight %>
   </div>
 
   <div class="field">
-    <%= f.label :max_bench_press, "Max Bench Press (What you can lift for 1 rep)" %><br />
+    <%= f.label :max_bench_press, "Max Bench Press (What you can lift for 1 rep)", class: "user-info" %><br />
     <%= f.text_field :max_bench_press %>
   </div>
 
   <div class="field">
-    <%= f.label :max_squat, "Max Squat (What you can lift for 1 rep)" %><br />
+    <%= f.label :max_squat, "Max Squat (What you can lift for 1 rep)", class: "user-info" %><br />
     <%= f.text_field :max_squat%>
   </div>
 
   <div class="field">
-    <%= f.label :max_dead_lift, "Max Deadlift (What you can lift for 1 rep)" %><br />
+    <%= f.label :max_dead_lift, "Max Deadlift (What you can lift for 1 rep)", class: "user-info" %><br />
     <%= f.text_field :max_dead_lift %>
   </div>
 
