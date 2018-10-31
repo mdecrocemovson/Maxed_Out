@@ -17,6 +17,6 @@ class Api::V1::WorkoutsController < ApiController
   private
 
   def workout_params
-    params.require(:workout).permit(:user_id, :date, :location, :goal, :review).merge(user_id: current_user.id)
+    params.require(:workout).permit(:user_id, :date, :location, :goal, :review)
   end
 end

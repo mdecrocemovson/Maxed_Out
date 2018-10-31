@@ -16,8 +16,33 @@ class WorkoutShow extends Component {
       date: "",
       location: "",
       review: "",
-      goal: ""
+      goal: "",
+      set_collections: []
     }
+    this.addSetCollection = this.addSetCollection.bind(this)
+  }
+
+  addSetCollection(setCollection) {
+    fetch ('/api/v1/set_collections', {
+      credentials: 'same-origin',
+      method: 'post',
+      body: JSON.stringify(setCollection),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("This worked!")
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+
   }
 
   componentDidMount() {
@@ -33,12 +58,12 @@ class WorkoutShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({workout_id: body["id"], user_id: body["user_id"], date: body["date"], location: body["location"], review: body["review"], goal: body["goal"]})
+      this.setState({workout_id: body["id"], user_id: body["user_id"], date: body["date"], location: body["location"], review: body["review"], goal: body["goal"], set_collections: body["set_collections"]})
     })
   }
 
   render() {
-    // debugger
+    // console.log(this.state)
     return (
       <div>
 
@@ -48,8 +73,12 @@ class WorkoutShow extends Component {
           review = {this.state.review}
           goal = {this.state.goal}
           />
-        <a href={`/workouts/${this.state.workout_id}/set_collections/new`}><button id="add_sets">Let's add some damn sets and reps to this why don't we??</button></a>
-        <SetCollectionForm />
+        <h3>Total number of sets is {this.state.set_collections.length} </h3>
+        <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
+        <SetCollectionForm
+          workout_id = {this.state.workout_id}
+          addSetCollection = {this.addSetCollection}
+          />
       </div>
     )
   }

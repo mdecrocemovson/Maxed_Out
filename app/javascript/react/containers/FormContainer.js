@@ -5,13 +5,11 @@ class FormContainer extends Component {
     super(props);
     this.state = {
       date: "",
-      completed: "",
       location: "",
       review: "",
       goal: ""
     }
     this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleCompletedChange = this.handleCompletedChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleReviewChange = this.handleReviewChange.bind(this);
     this.handleGoalChange = this.handleGoalChange.bind(this);
@@ -20,9 +18,6 @@ class FormContainer extends Component {
 
   handleDateChange(event) {
     this.setState({date: event.target.value})
-  }
-  handleCompletedChange(event) {
-    this.setState({completed: event.target.value})
   }
   handleLocationChange(event) {
     this.setState({location: event.target.value})
@@ -39,14 +34,13 @@ class FormContainer extends Component {
     let createdWorkout;
     createdWorkout = {
       date: this.state.date,
-      completed: this.state.completed,
       location: this.state.location,
       review: this.state.review,
       goal: this.state.goal
     }
 
     this.props.addWorkout(createdWorkout)
-    this.setState({review: "", completed: "", location: "", goal: ""})
+    this.setState({review: "", location: "", goal: ""})
   }
 
   render () {
@@ -66,14 +60,6 @@ class FormContainer extends Component {
               />
             </div>
 
-            <div className="medium-6 cell">
-            <label className="workout-form-label" htmlFor="completed">Completed (Y/N)</label>
-            <TextField
-              type="text"
-              handleChange={this.handleCompletedChange}
-              content = {this.state.completed}
-            />
-            </div>
 
             <div className="medium-6 cell">
             <label className="workout-form-label" htmlFor="location">Location (Where was it?)</label>
