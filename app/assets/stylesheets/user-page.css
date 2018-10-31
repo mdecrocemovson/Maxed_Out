@@ -10,3 +10,12 @@
 .user-lifts {
   padding-left: 20px;
 }
+
+.user-div {
+  padding: 20px;
+}
+
+.user-logo {
+  font-size: 50px;
+  text-decoration: underline;
+}

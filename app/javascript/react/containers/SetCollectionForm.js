@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
 import TextField from '../components/TextField'
 import DropdownExercise from '../components/DropdownExercise'
 
@@ -36,7 +38,6 @@ class SetCollectionForm extends Component {
   handleExerciseChange(event) {
     this.setState({exercise_id: event.target.value})
   }
-
   handleSubmit(event) {
     event.preventDefault()
     let createdSetCollection;
@@ -49,7 +50,6 @@ class SetCollectionForm extends Component {
     }
     this.props.addSetCollection(createdSetCollection)
     this.setState({set_count: "", reps_count: "", exercise_id: "", weight: ""})
-    debugger
   }
   componentDidMount() {
     fetch('/api/v1/exercises')
@@ -69,12 +69,11 @@ class SetCollectionForm extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
       <div>
         <form onSubmit={this.handleSubmit} className="callout">
-          <div className="set-collection-form grid-container">
+          <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
 
             <div className="medium-6 cell">

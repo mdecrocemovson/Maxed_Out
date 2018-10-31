@@ -32,10 +32,23 @@ body {
 
 .workout-counter {
   color:#6BACBF;
+  font-size: 30px;
   font-family: 'Hammersmith One', sans-serif;
 }
 
 .index-logo {
-  color: #9DBCBC;
+  background-image: url("nerd-to-hero");
+  text-align: center;
+  font-size: 40px;
+  padding: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
   font-family: 'Hammersmith One', sans-serif;
+}
+
+
+.flash {
+  text-align: center;
+  font-size: 20px;
 }

@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import FormContainer from './FormContainer'
 import WorkoutDescription from '../components/WorkoutDescription'
 import SetCollectionForm from './SetCollectionForm'
+import SetCollectionShow from '../components/SetCollectionShow'
 
 class WorkoutShow extends Component {
   constructor (props) {
@@ -17,7 +18,8 @@ class WorkoutShow extends Component {
       location: "",
       review: "",
       goal: "",
-      set_collections: []
+      set_collections: [],
+      exercises: []
     }
     this.addSetCollection = this.addSetCollection.bind(this)
   }
@@ -42,6 +44,12 @@ class WorkoutShow extends Component {
         throw(error);
       }
     })
+    .then(response => response.json())
+    .then(body => {
+      let current_set_collection = this.state.set_collections
+      let newSetCollection = current_set_collection.concat(body)
+      this.setState({set_collections: newSetCollection})
+    })
 
   }
 
@@ -63,22 +71,29 @@ class WorkoutShow extends Component {
   }
 
   render() {
-    // console.log(this.state)
     return (
       <div>
-
+        <div className="workout-description">
         <WorkoutDescription
           date = {this.state.date}
           location = {this.state.location}
           review = {this.state.review}
           goal = {this.state.goal}
           />
-        <h3>Total number of sets is {this.state.set_collections.length} </h3>
+        </div>
+        <div className="set-collecton-show">
+        <SetCollectionShow
+          setCollection = {this.state.set_collections}
+          />
+        </div>
         <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
+        <div className="set-collection-form">
         <SetCollectionForm
           workout_id = {this.state.workout_id}
           addSetCollection = {this.addSetCollection}
+          user_id = {this.state.user_id}
           />
+        </div>
       </div>
     )
   }
