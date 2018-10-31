@@ -14,3 +14,38 @@
 #add_sets {
   color: purple;
 }
+
+.set-collection-header {
+  color: #1F6764;
+}
+
+.workout-description {
+  padding: 10px;
+  border: 2px solid;
+  margin: 20px 0px 20px 0px;
+}
+
+.set-collecton-show {
+  margin: 20px 0px 20px 0px;
+  border: 2px solid;
+  padding: 20px;
+  clear:left;
+}
+
+.set-collection-form {
+  margin: 10px 0px 10px 0px;
+  padding: 20px;
+  border: 2px solid;
+}
+#guy-lifting {
+  height: 200px;
+}
+
+.exercise-name {
+  color:#E47C5D;
+}
+
+.user-input {
+  font-weight: bolder;
+  color: #C74066;
+}
