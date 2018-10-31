@@ -1,4 +1,6 @@
 class Api::V1::SetCollectionsController < ApiController
+
+
   def create
     set_collection = SetCollection.new(set_collection_params)
     if set_collection.save
@@ -7,7 +9,7 @@ class Api::V1::SetCollectionsController < ApiController
       render json: set_collection.errors.full_messages
     end
   end
-  #just used for seeing what sets are put out there rn.
+  
   def index
     set_collections = SetCollection.all
     render json: set_collections

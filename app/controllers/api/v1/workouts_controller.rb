@@ -11,7 +11,7 @@ class Api::V1::WorkoutsController < ApiController
 
   def show
     workout = Workout.find(params[:id])
-    render json: workout
+    render json: workout, include: ["set_collections", "set_collections.exercise"]
   end
 
   private

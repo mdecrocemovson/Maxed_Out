@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const DropdownExercise = (props) => {
   let exerciseDropDown = props.exercises.map((exercise)=> {
-    return <option value={exercise.id}>{exercise.name}</option>
+    return <option key={exercise.id} value={exercise.id}>{exercise.name}</option>
   })
   return (
     <div>
