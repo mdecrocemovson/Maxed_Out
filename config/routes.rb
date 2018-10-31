@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :exercises
       resources :workouts
+      resources :set_collections
     end
   end
 end

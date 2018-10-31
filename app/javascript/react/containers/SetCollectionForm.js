@@ -39,15 +39,16 @@ class SetCollectionForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    debugger
     let createdSetCollection;
     createdSetCollection = {
       sets: this.state.set_count,
       reps: this.state.reps_count,
       exercise_id: this.state.exercise_id,
-      workout_id: this.state.workout_id,
+      workout_id: this.props.workout_id,
       weight: this.state.weight
     }
+    this.props.addSetCollection(createdSetCollection)
+    this.setState({set_count: "", reps_count: "", exercise_id: "", weight: ""})
     debugger
   }
   componentDidMount() {
@@ -92,7 +93,7 @@ class SetCollectionForm extends Component {
             />
             </div>
 
-            <div className="medium-3 cell">
+            <div className="medium-6 cell">
             <label className="workout-form-label" htmlFor="weight">Weight</label>
             <TextField
               type="number"
