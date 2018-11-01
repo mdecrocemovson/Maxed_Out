@@ -4,9 +4,16 @@ class Api::V1::SetCollectionsController < ApiController
   def create
     set_collection = SetCollection.new(set_collection_params)
     if set_collection.save
-      render json: set_collection
+      render json: SetCollectionSerializer.new(set_collection, :scope => current_user).to_json
+      if set_collection.exercise_id == 1 && set_collection.weight.to_i > current_user.max_bench_press.to_i
+        current_user.update_attribute(:max_bench_press, set_collection.weight)
+      elsif set_collection.exercise_id == 2 && set_collection.weight.to_i  > current_user.max_squat.to_i
+        current_user.update_attribute(:max_squat, set_collection.weight)
+      elsif set_collection.exercise_id == 3 && set_collection.weight.to_i > current_user.max_dead_lift.to_i
+        current_user.update_attribute(:max_dead_lift, set_collection.weight)
+      end
     else
-      render json: set_collection.errors.full_messages
+      render json: { errors: set_collection.errors.full_messages.join(', ') }
     end
   end
 

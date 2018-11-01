@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const SetCollectionShow = (props) => {
   let exercises = props.setCollection.map((set) => {
