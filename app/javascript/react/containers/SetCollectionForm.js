@@ -14,7 +14,8 @@ class SetCollectionForm extends Component {
       weight: "",
       exercise_id: "",
       exercises: [],
-      workout_id: this.props.workout_id
+      workout_id: this.props.workout_id,
+      errors: ""
     }
     this.handleSetCountChange = this.handleSetCountChange.bind(this)
     this.handleRepsCountChange = this.handleRepsCountChange.bind(this)
@@ -38,6 +39,18 @@ class SetCollectionForm extends Component {
   handleExerciseChange(event) {
     this.setState({exercise_id: event.target.value})
   }
+
+  handleSubmitNotification() {
+    toast.success('Set added!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  }
+
   handleSubmit(event) {
     event.preventDefault()
     let createdSetCollection;
@@ -48,8 +61,18 @@ class SetCollectionForm extends Component {
       workout_id: this.props.workout_id,
       weight: this.state.weight
     }
+    debugger
+    if (createdSetCollection.sets == ""){
+      this.setState({errors: "Please add some sets"})
+    } else if (createdSetCollection.reps == "") {
+      this.setState({errors: "Please add some reps"})
+    } else if (createdSetCollection.exercise_id == "") {
+      this.setState({errors: "Please choose an exercise"})
+    } else {
     this.props.addSetCollection(createdSetCollection)
+    this.handleSubmitNotification()
     this.setState({set_count: "", reps_count: "", weight: ""})
+    }
   }
   componentDidMount() {
     fetch('/api/v1/exercises')
@@ -72,6 +95,18 @@ class SetCollectionForm extends Component {
     return (
       <div>
       <div>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          pauseOnHover
+          />
+        {this.state.errors}
         <form onSubmit={this.handleSubmit} className="callout">
           <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
