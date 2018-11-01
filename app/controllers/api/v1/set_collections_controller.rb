@@ -7,6 +7,7 @@ class Api::V1::SetCollectionsController < ApiController
       render json: set_collection
     else
       render json: set_collection.errors.full_messages
+      render json: { errors: set_collection.errors.full_messages }
     end
   end
 

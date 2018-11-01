@@ -12,18 +12,62 @@ class WorkoutShow extends Component {
   constructor (props) {
     super(props);
     this.state = {
+      user_bp_max: "",
+      user_squat_max: "",
+      user_deadlift_max: "",
       workout_id: "",
       user_id: "",
       date: "",
       location: "",
       review: "",
       goal: "",
+      errors: "",
       set_collections: [],
       exercises: [],
     }
     this.addSetCollection = this.addSetCollection.bind(this)
     this.handleSetCollectionDelete = this.handleSetCollectionDelete.bind(this)
     this.handleDeleteNotification = this.handleDeleteNotification.bind(this)
+    this.checkDeadliftMax = this.checkDeadliftMax.bind(this)
+    this.checkBenchMax = this.checkBenchMax.bind(this)
+    this.checkSquatMax = this.checkSquatMax.bind(this)
+  }
+
+  checkDeadliftMax(weight) {
+    if (weight > this.state.user_deadlift_max){
+      toast.success(`Congrats on setting a new deadlift max at ${weight}!`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+      });
+    }
+  }
+  checkBenchMax(weight) {
+    if (weight > this.state.user_bp_max){
+      toast.success(`Congrats on setting a new bench max at ${weight}!`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+      });
+    }
+  }
+  checkSquatMax(weight) {
+    if (weight > this.state.user_squat_max){
+      toast.success(`Congrats on setting a new squat max at ${weight}!`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+      });
+    }
   }
 
   addSetCollection(setCollection) {
@@ -47,7 +91,18 @@ class WorkoutShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({error: error})
+      if (body.errors){
+        this.setState({errors: body.errors})
+      }
+      else if (body.exercise_id == 3){
+        this.checkDeadliftMax(body.weight)
+      }
+      else if (body.exercise_id == 2) {
+        this.checkSquatMax(body.weight)
+      }
+      else if (body.exercise_id == 1){
+        this.checkBenchMax(body.weight)
+      }
       let current_set_collection = this.state.set_collections
       let newSetCollection = current_set_collection.concat(body)
       this.setState({set_collections: newSetCollection})
@@ -56,7 +111,7 @@ class WorkoutShow extends Component {
   }
 
   handleDeleteNotification() {
-    toast.error('Set collecton deleted!', {
+    toast.error('Sets deleted!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -109,7 +164,24 @@ class WorkoutShow extends Component {
     })
   }
 
-  handleD
+  componentDidUpdate(){
+    fetch(`/api/v1/users/${this.state.user_id}`)
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({user_bp_max: body.max_bench_press,
+      user_squat_max: body.max_squat,
+      user_deadlift_max: body.max_dead_lift,})
+    })
+  }
 
   render() {
     return (

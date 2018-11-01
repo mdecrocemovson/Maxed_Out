@@ -1,27 +1,26 @@
 <div class="index_page">
-<% current_user_email_array = current_user.email.split("@") %>
-<% current_user_name = current_user_email_array[0]%>
-<h2 class="index-logo"> Here is the list of your workouts <%= current_user_name %></h2>
-
-<a href="workouts/new"><button  class="new-workout-button" href="workouts/new"> Lets track that most recent workout you did you stud!</button></a>
-<br>
-<br>
-<% counter = 1 %>
-<% @workouts.each do |workout| %>
-    <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout on <%= workout.date %> (click to add sets/info)</h3></a>
-  <br>
-  <% counter += 1 %>
-  <% if workout.user_id = current_user.id %>
-    <p>You were at "<%= workout.location %>" when you cranked those weights boiiiii</p>
-    <p> The goal you set were: "<%= workout.goal %>" for your next workout </p>
-    <p> You described the workout as <%= workout.review %> </p>
-    <% end %>
-    <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
+  <% current_user_email_array = current_user.email.split("@") %>
+  <% current_user_name = current_user_email_array[0]%>
+  <h2 class="index-logo"> Here is the list of your workouts <%= current_user_name %></h2>
+  <div class="add-workout">
+    <a href="workouts/new"><button  class="new-workout-button" href="workouts/new"> Lets track that most recent workout you did you stud!</button></a>
+  </div>
   <br>
   <br>
-<% end %>
-
-
-<br>
-<br>
+  <div class="workouts">
+  <% counter = 1 %>
+  <% @workouts.each do |workout| %>
+      <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout on <%= workout.date %> (click to add sets/info)</h3></a>
+      <br>
+      <% counter += 1 %>
+      <% if workout.user_id = current_user.id %>
+        <p>You were at "<%= workout.location %>" when you cranked those weights boiiiii</p>
+        <p> The goal you set were: "<%= workout.goal %>" for your next workout </p>
+        <p> You described the workout as <%= workout.review %> </p>
+        <% end %>
+      <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
+      <br>
+      <br>
+      <% end %>
+    </div>
 </div>

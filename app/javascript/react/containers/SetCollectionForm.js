@@ -61,7 +61,6 @@ class SetCollectionForm extends Component {
       workout_id: this.props.workout_id,
       weight: this.state.weight
     }
-    debugger
     if (createdSetCollection.sets == ""){
       this.setState({errors: "Please add some sets"})
     } else if (createdSetCollection.reps == "") {
