@@ -35,7 +35,7 @@ class WorkoutShow extends Component {
 
   checkDeadliftMax(weight) {
     if (weight > this.state.user_deadlift_max){
-      toast.success(`Congrats on setting a new deadlift max at ${weight}!`, {
+      toast.success(`Congrats on setting a new deadlift max at ${weight}! It's been updated in your profile!`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -47,7 +47,7 @@ class WorkoutShow extends Component {
   }
   checkBenchMax(weight) {
     if (weight > this.state.user_bp_max){
-      toast.success(`Congrats on setting a new bench max at ${weight}!`, {
+      toast.success(`Congrats on setting a new bench max at ${weight}! It's been updated in your profile!`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -59,7 +59,7 @@ class WorkoutShow extends Component {
   }
   checkSquatMax(weight) {
     if (weight > this.state.user_squat_max){
-      toast.success(`Congrats on setting a new squat max at ${weight}!`, {
+      toast.success(`Congrats on setting a new squat max at ${weight}! It's been updated in your profile!`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -68,6 +68,17 @@ class WorkoutShow extends Component {
         draggable: true
       });
     }
+  }
+
+  handleSubmitNotification() {
+    toast.success('Set added!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
   }
 
   addSetCollection(setCollection) {
@@ -94,24 +105,37 @@ class WorkoutShow extends Component {
       if (body.errors){
         this.setState({errors: body.errors})
       }
-      else if (body.exercise_id == 3){
-        this.checkDeadliftMax(body.weight)
+      else {
+        this.handleSubmitNotification()
+        this.setState({user_bp_max: body.current_user.max_bench_press, user_squat_max: body.current_user.max_squat, user_deadlift_max: body.current_user.max_dead_lift})
+        if (body.exercise_id == 1){
+          this.checkBenchMax(body.weight)
+        } else if (body.exercise_id == 2) {
+          this.checkSquathMax(body.weight)
+        } else if (body.exercise_d == 3){
+          this.checkDeadliftMax(body.weight)
+        }
+        let current_set_collection = this.state.set_collections
+        let newSetCollection = current_set_collection.concat(body)
+        this.setState({set_collections: newSetCollection})
       }
-      else if (body.exercise_id == 2) {
-        this.checkSquatMax(body.weight)
-      }
-      else if (body.exercise_id == 1){
-        this.checkBenchMax(body.weight)
-      }
-      let current_set_collection = this.state.set_collections
-      let newSetCollection = current_set_collection.concat(body)
-      this.setState({set_collections: newSetCollection})
     })
 
   }
 
   handleDeleteNotification() {
     toast.error('Sets deleted!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  }
+
+  handleSubmitNotification() {
+    toast.success('Set added!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -164,25 +188,6 @@ class WorkoutShow extends Component {
     })
   }
 
-  componentDidUpdate(){
-    fetch(`/api/v1/users/${this.state.user_id}`)
-    .then(response => {
-      if (response.ok) {
-        return response;
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
-        error = new Error(errorMessage);
-        throw(error);
-      }
-    })
-    .then(response => response.json())
-    .then(body => {
-      this.setState({user_bp_max: body.max_bench_press,
-      user_squat_max: body.max_squat,
-      user_deadlift_max: body.max_dead_lift,})
-    })
-  }
-
   render() {
     return (
       <div>
@@ -202,11 +207,23 @@ class WorkoutShow extends Component {
         </div>
         <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
         <div className="set-collection-form">
+        {this.state.errors}
         <SetCollectionForm
           workout_id = {this.state.workout_id}
           addSetCollection = {this.addSetCollection}
           user_id = {this.state.user_id}
           />
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnVisibilityChange
+            draggable
+            pauseOnHover
+            />
         </div>
       </div>
     )

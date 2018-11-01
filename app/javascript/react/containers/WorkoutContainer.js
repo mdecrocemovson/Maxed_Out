@@ -11,19 +11,7 @@ class WorkoutContainer extends Component {
       workout: []
     }
     this.addWorkout = this.addWorkout.bind(this)
-    this.notify = this.notify.bind(this)
   }
-
-  notify() {
-    toast.success('Thats a great review!', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-    });
-}
 
   addWorkout(submission) {
     fetch('/api/v1/workouts', {
@@ -47,7 +35,6 @@ class WorkoutContainer extends Component {
     })
     .then (response => response.json())
     .then(body => {
-      this.notify()
       this.setState({workout: body})
       browserHistory.push(`/workouts/${body.id}`)
     })
