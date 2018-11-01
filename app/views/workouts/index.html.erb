@@ -8,16 +8,15 @@
 <br>
 <% counter = 1 %>
 <% @workouts.each do |workout| %>
-    <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout #<%= counter %> (click to add sets/info)</h3></a>
+    <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout on <%= workout.date %> (click to add sets/info)</h3></a>
   <br>
   <% counter += 1 %>
   <% if workout.user_id = current_user.id %>
-    <p>You completed this workout on <%= workout.date %></p>
     <p>You were at "<%= workout.location %>" when you cranked those weights boiiiii</p>
     <p> The goal you set were: "<%= workout.goal %>" for your next workout </p>
     <p> You described the workout as <%= workout.review %> </p>
     <% end %>
-    <%= link_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
   <br>
   <br>
 <% end %>

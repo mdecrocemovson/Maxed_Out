@@ -19,7 +19,7 @@ class WorkoutShow extends Component {
       review: "",
       goal: "",
       set_collections: [],
-      exercises: []
+      exercises: [],
     }
     this.addSetCollection = this.addSetCollection.bind(this)
     this.handleSetCollectionDelete = this.handleSetCollectionDelete.bind(this)
@@ -38,7 +38,6 @@ class WorkoutShow extends Component {
     })
     .then(response => {
       if (response.ok) {
-        alert("This worked!")
         return response;
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
@@ -48,6 +47,7 @@ class WorkoutShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
+      this.setState({error: error})
       let current_set_collection = this.state.set_collections
       let newSetCollection = current_set_collection.concat(body)
       this.setState({set_collections: newSetCollection})
@@ -56,7 +56,7 @@ class WorkoutShow extends Component {
   }
 
   handleDeleteNotification() {
-    toast.error('Review deleted!', {
+    toast.error('Set collecton deleted!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,

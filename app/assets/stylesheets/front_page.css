@@ -32,7 +32,7 @@ body {
 
 .workout-counter {
   color:#6BACBF;
-  font-size: 30px;
+  font-size: 35px;
   font-family: 'Hammersmith One', sans-serif;
 }
 
@@ -51,4 +51,10 @@ body {
 .flash {
   text-align: center;
   font-size: 20px;
+}
+.button-to {
+  background-color: #67434F;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
 }
