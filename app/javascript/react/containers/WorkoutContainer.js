@@ -51,6 +51,7 @@ class WorkoutContainer extends Component {
       this.setState({workout: body})
       browserHistory.push(`/workouts/${body.id}`)
     })
+
   }
 
   render() {

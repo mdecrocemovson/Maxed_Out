@@ -7,7 +7,7 @@ const DropdownExercise = (props) => {
   return (
     <div>
       <select onChange={props.handleChange} >
-        <option disabled selected value> -- select a lift -- </option>
+        <option selected="true" disabled="disabled">Choose Workout</option>  
         {exerciseDropDown}
       </select>
     </div>

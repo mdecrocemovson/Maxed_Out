@@ -9,10 +9,16 @@ class Api::V1::SetCollectionsController < ApiController
       render json: set_collection.errors.full_messages
     end
   end
-  
+
   def index
     set_collections = SetCollection.all
     render json: set_collections
+  end
+
+  def destroy
+    @set_collection = SetCollection.find(params[:id])
+    @set_collection.destroy
+    render json: @set_collection
   end
 
   private

@@ -38,7 +38,6 @@ class FormContainer extends Component {
       review: this.state.review,
       goal: this.state.goal
     }
-
     this.props.addWorkout(createdWorkout)
     this.setState({review: "", location: "", goal: ""})
   }

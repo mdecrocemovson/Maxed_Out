@@ -17,6 +17,7 @@
     <p> The goal you set were: "<%= workout.goal %>" for your next workout </p>
     <p> You described the workout as <%= workout.review %> </p>
     <% end %>
+    <%= link_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' } %>
   <br>
   <br>
 <% end %>

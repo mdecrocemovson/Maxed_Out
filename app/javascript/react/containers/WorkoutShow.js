@@ -22,6 +22,8 @@ class WorkoutShow extends Component {
       exercises: []
     }
     this.addSetCollection = this.addSetCollection.bind(this)
+    this.handleSetCollectionDelete = this.handleSetCollectionDelete.bind(this)
+    this.handleDeleteNotification = this.handleDeleteNotification.bind(this)
   }
 
   addSetCollection(setCollection) {
@@ -53,6 +55,43 @@ class WorkoutShow extends Component {
 
   }
 
+  handleDeleteNotification() {
+    toast.error('Review deleted!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  }
+
+  handleSetCollectionDelete(id) {
+    event.preventDefault()
+    fetch(`/api/v1/set_collections/${id}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(response => response.json())
+      .then(response => {
+        let new_collections = this.state.set_collections.filter(set_collection => set_collection.id != response.id)
+        this.setState({set_collections: new_collections})
+        this.handleDeleteNotification()
+      })
+  }
+
   componentDidMount() {
     fetch(`/api/v1/workouts/${this.props.params.id}`)
     .then(response => {
@@ -70,6 +109,8 @@ class WorkoutShow extends Component {
     })
   }
 
+  handleD
+
   render() {
     return (
       <div>
@@ -84,6 +125,7 @@ class WorkoutShow extends Component {
         <div className="set-collecton-show">
         <SetCollectionShow
           setCollection = {this.state.set_collections}
+          handleDelete = {this.handleSetCollectionDelete}
           />
         </div>
         <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
