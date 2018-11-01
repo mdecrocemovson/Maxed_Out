@@ -2,10 +2,16 @@ import React from 'react'
 
 const SetCollectionShow = (props) => {
   let exercises = props.setCollection.map((set) => {
+    let deleteSetCollection = () => {
+        if (confirm("Are you sure you want to delete this review?")){
+          props.handleDelete(set.id)
+        }
+      }
     return (
-      <div>
+      <div key = {set.id}>
       <h4 className="exercise-name" key={set.id}>{set.exercise.name}:</h4>
         <p>sets: {set.sets}, reps: {set.reps}, weight: {set.weight}</p>
+        <button onClick = {deleteSetCollection}>Delete Review</button>
       </div>
       )
   })

@@ -7,4 +7,11 @@ class WorkoutsController < ApplicationController
   def new
     @workout = Workout.new
   end
+
+  def destroy
+    @workout = Workout.find(params[:id])
+    @workout.destroy
+
+    redirect_to workouts_path
+  end
 end

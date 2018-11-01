@@ -49,7 +49,7 @@ class SetCollectionForm extends Component {
       weight: this.state.weight
     }
     this.props.addSetCollection(createdSetCollection)
-    this.setState({set_count: "", reps_count: "", exercise_id: "", weight: ""})
+    this.setState({set_count: "", reps_count: "", weight: ""})
   }
   componentDidMount() {
     fetch('/api/v1/exercises')
@@ -80,6 +80,7 @@ class SetCollectionForm extends Component {
               <label className="workout-form-label" htmlFor="sets">Sets</label>
               <TextField
               type="number"
+              content = {this.state.set_count}
               handleChange ={this.handleSetCountChange}
               />
             </div>
@@ -88,6 +89,7 @@ class SetCollectionForm extends Component {
             <label className="workout-form-label" htmlFor="reps">Reps</label>
             <TextField
               type="number"
+              content = {this.state.reps_count}
               handleChange = {this.handleRepsCountChange}
             />
             </div>
@@ -96,12 +98,14 @@ class SetCollectionForm extends Component {
             <label className="workout-form-label" htmlFor="weight">Weight</label>
             <TextField
               type="number"
+              content = {this.state.weight}
               handleChange = {this.handleWeightChange}
             />
               <label className="workout-form-label" htmlFor="exercise">Exercise</label>
               <DropdownExercise
                 exercises = {this.state.exercises}
                 handleChange = {this.handleExerciseChange}
+                content = {this.state.exercise_id}
               />
             </div>
             <input type="submit" className="button submit-workout-button" value="Submit"/>
