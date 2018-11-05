@@ -1,63 +1,63 @@
 .user-info {
   text-align: center;
-  font-family: 'Russo One', sans-serif;
-  color: #954f3a;
+  font-family: 'Economica', sans-serif;
+  color: #FF4E50;
 }
 
 .user-account {
-  color: #834533;
+  color:#FF4E50;
   text-align: center;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .user-email {
-  color: #834533
+  color: #FF4E50
   text-align: center;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .total-workouts {
-  color:#834533;
+  color:#FF4E50;
   text-align: center;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 
 }
 .user-time {
-  color: #834533;
+  color: #FF4E50;
   padding-left: 20px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .maxes {
-  color: #BF735C;
+  color: #FF4E50;
 }
 
 
 .user-lifts {
   padding-left: 20px;
-  color: #834533;
-  font-family: 'Russo One', sans-serif;
+  color: #FF4E50;
+  font-family: 'Economica', sans-serif;
 }
 
 .your-lifts {
-  color: #834533;
+  color: #FF4E50;
   text-align: center;
 }
 
 .user-div {
   padding: 20px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .user-logo {
   font-size: 50px;
   text-decoration: underline;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .chart-header {
   color: white;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .chart-div {

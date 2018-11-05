@@ -8,7 +8,7 @@
 }
 
 #title-site {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .workout-form {
@@ -25,7 +25,7 @@
 }
 
 body button {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .add-workout {
@@ -38,7 +38,7 @@ body {
   background-color: #202020;
   color: white;
   padding-left: 10px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .workouts {
@@ -48,7 +48,7 @@ body {
 .workout-counter {
   color:#6BACBF;
   font-size: 35px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 .index-logo {
@@ -58,7 +58,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   color: #43879A;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 
@@ -72,14 +72,14 @@ body {
   border: 2px;
   color: white;
   padding: 10px;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
 #index-bear {
-  background-image: url("http://1.bp.blogspot.com/-ClFbGcSfgv4/VZFFgvyZo6I/AAAAAAAAB20/FN0w8DMB7ko/s1600/strong-weak.jpg");
+  background-image: url("https://www.t-nation.com/system/publishing/articles/10005963/original/The-Deadlift-The-Nervous-System.jpg?1519170189");
   background-position: center;
   background-repeat: no-repeat;
-  padding: 150px;
+  padding: 200px;
 }
 #index-bear p {
   visibility: hidden;
