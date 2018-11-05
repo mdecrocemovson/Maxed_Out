@@ -9,8 +9,7 @@
   <div class="add-workout">
     <a href="workouts/new"><button  class="new-workout-button" href="workouts/new"> Hey stud, let's track your most recent workout!</button></a>
   </div>
-  <br>
-  <br>
+
   <div class="workouts">
   <% counter = 1 %>
   <% @workouts.each do |workout| %>
@@ -18,13 +17,13 @@
       <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout on <%= workout.performed_on %> (click to add sets/info)</h3></a>
       <br>
       <% counter += 1 %>
-        <p>You were at "<%= workout.location %>" when you crushed the iron temple dudeee</p>
+        <p>You were at "<%= workout.location %>"</p>
         <p> The goals you set were: "<%= workout.goal %>" for your next workout </p>
         <p> You described the workout as <%= workout.review %> </p>
         <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
+        <br/>
         <% end %>
       <% end %>
-
     </div>
     <br/>
 </div>

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import TextField from '../components/TextField'
+import LocationSearchInput from '../components/LocationSearchInput'
+
+
 class FormContainer extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +17,7 @@ class FormContainer extends Component {
     this.handleReviewChange = this.handleReviewChange.bind(this);
     this.handleGoalChange = this.handleGoalChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLocationSelection = this.handleLocationSelection.bind(this)
   }
 
   handlePerformedOnChange(event) {
@@ -27,6 +31,10 @@ class FormContainer extends Component {
   }
   handleGoalChange(event) {
     this.setState({goal: event.target.value})
+  }
+
+  handleLocationSelection(address){
+    this.setState({location: address})
   }
 
   handleSubmit(event) {
@@ -63,12 +71,13 @@ class FormContainer extends Component {
 
             <div className="medium-4 cell">
             <label className="workout-form-label" htmlFor="location">Location (Where was it?)</label>
-            <TextField
-              type="text"
-              handleChange = {this.handleLocationChange}
-              content = {this.state.location}
-            />
+              <LocationSearchInput
+                value = {this.state.location}
+                onChange = {this.handleLocationSelection}
+                />
             </div>
+
+
 
             <div className="medium-4 cell">
             <label className="workout-form-label" htmlFor="review">Review (how did you feel?)</label>

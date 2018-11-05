@@ -28,6 +28,7 @@ class UserGraph extends Component {
     .then(body => {
       this.setState({bench_press_array: body})
     })
+    .then(
 
     fetch (`/api/v1/exercises/1/set_collections/2`)
     .then(response => {
@@ -42,7 +43,9 @@ class UserGraph extends Component {
     .then(response => response.json())
     .then(body => {
       this.setState({squat_array: body})
-    })
+    }))
+    .then(
+
 
     fetch (`/api/v1/exercises/1/set_collections/3`)
     .then(response => {
@@ -57,7 +60,7 @@ class UserGraph extends Component {
     .then(response => response.json())
     .then(body => {
       this.setState({deadlift_array: body})
-    })
+    }))
   }
 
   render() {
@@ -69,9 +72,9 @@ class UserGraph extends Component {
     let benchCounter = 0;
     let squatCounter = 0;
     let deadCounter = 0;
-    let dataBench = [["Week","Bench Press Logged"]]
-    let dataSquat = [["Week", "Squat Logged"]]
-    let dataDead = [["Week", "Deadlift Logged"]]
+    let dataBench = [["Workout","Bench Press Logged"]]
+    let dataSquat = [["Workout", "Squat Logged"]]
+    let dataDead = [["Workout", "Deadlift Logged"]]
     let benchLength = this.state.bench_press_array.length
     let squatLength = this.state.squat_array.length
     let deadLength = this.state.deadlift_array.length
