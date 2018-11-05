@@ -16,3 +16,15 @@
   height: 350px;
   float: right;
 }
+
+.workout-form-label {
+  font-size: 30px;
+}
+
+.new-workout {
+  font-size: 30px;
+}
+
+.form_input {
+  font-size: 500px;
+}

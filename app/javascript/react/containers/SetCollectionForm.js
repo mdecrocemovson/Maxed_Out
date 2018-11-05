@@ -76,7 +76,7 @@ class SetCollectionForm extends Component {
       <div>
         {this.state.errors}
         <h1 id="add_sets">Let's add some sets and reps to this why don't we??</h1>
-        <form onSubmit={this.handleSubmit} className="callout">
+        <form onSubmit={this.handleSubmit} className="callout" id="set-collection-form">
           <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
 

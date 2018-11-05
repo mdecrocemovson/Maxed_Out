@@ -22,6 +22,7 @@
 
 .set-collection-header {
   color: #CD5476;
+  font-size: 35px;
   font-family: 'Economica', sans-serif;
 }
 
@@ -54,6 +55,7 @@
 
 .exercise-name {
   color:#E47C5D;
+  font-size: 30px;
   font-family: 'Economica', sans-serif;
 }
 
@@ -70,4 +72,8 @@
 .delete-set-collection {
   background-color: #D87B95;
   font-family: 'Economica', sans-serif;
+}
+
+#set-collection-form {
+  background-color: #202020;
 }

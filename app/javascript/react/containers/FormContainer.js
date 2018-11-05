@@ -54,10 +54,10 @@ class FormContainer extends Component {
     console.log(this.state)
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className="callout">
+        <form onSubmit={this.handleSubmit} className="callout" id="set-collection-form">
           <div className="workout-form grid-container">
             <div className="grid-x grid-padding-x workout-form-label">
-              <img className="dost-thou" src="https://i.kym-cdn.com/photos/images/original/000/428/258/e29.jpg"/>
+              <img className="dost-thou" src="http://assets.schwarzenegger.com/uploads/images/index/cache/1a44b4a15853cd473d365ad724404c9d_608_334_c1.jpg"/>
             <div className="medium-4 cell">
               <label className="workout-form-label" htmlFor="performed_on">Date</label>
               <TextField

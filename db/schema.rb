@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_30_151433) do
+ActiveRecord::Schema.define(version: 2018_11_05_194747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(version: 2018_10_30_151433) do
     t.integer "max_squat"
     t.integer "max_bench_press"
     t.integer "max_dead_lift"
+    t.boolean "accountability_switch", default: false
+    t.integer "workouts_per_week"
+    t.string "accountability_buddy_email"
+    t.integer "dollar_amount"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

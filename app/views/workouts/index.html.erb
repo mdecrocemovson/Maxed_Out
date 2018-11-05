@@ -1,9 +1,9 @@
 <div class="index_page">
   <% current_user_email_array = current_user.email.split("@") %>
   <% current_user_name = current_user_email_array[0]%>
-  <h2 class="index-logo"> Here is the list of your workouts, <%= current_user_name %></h2>
+
   <div id="index-bear">
-    <p>Wow</p>
+    <h2 class="index-logo"> Here is the list of your workouts, <%= current_user_name %></h2>
   </div>
 
   <div class="add-workout">
@@ -14,14 +14,16 @@
   <% counter = 1 %>
   <% @workouts.each do |workout| %>
       <% if workout.user_id == current_user.id %>
+      <div class="workout">
       <a href="workouts/<%=workout.id%>"<h3 class="workout-counter">Workout on <%= workout.performed_on %> (click to add sets/info)</h3></a>
       <br>
       <% counter += 1 %>
         <p>You were at "<%= workout.location %>"</p>
-        <p> The goals you set were: "<%= workout.goal %>" for your next workout </p>
+        <p> The goals you set were: "<%= workout.goal %>" </p>
         <p> You described the workout as <%= workout.review %> </p>
         <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
         <br/>
+      </div>
         <% end %>
       <% end %>
     </div>

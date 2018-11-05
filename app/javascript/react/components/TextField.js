@@ -5,7 +5,7 @@ const TextField = (props) => {
     <div>
     <input
       type={props.type}
-      className="textField"
+      className="form_input textField"
       onChange = {props.handleChange}
       value = {props.content}
       />
