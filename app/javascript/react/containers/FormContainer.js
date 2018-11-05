@@ -9,15 +9,15 @@ class FormContainer extends Component {
       review: "",
       goal: ""
     }
-    this.handleDateChange = this.handleDateChange.bind(this);
+    this.handlePerformedOnChange = this.handlePerformedOnChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleReviewChange = this.handleReviewChange.bind(this);
     this.handleGoalChange = this.handleGoalChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleDateChange(event) {
-    this.setState({date: event.target.value})
+  handlePerformedOnChange(event) {
+    this.setState({performed_on: event.target.value})
   }
   handleLocationChange(event) {
     this.setState({location: event.target.value})
@@ -33,7 +33,7 @@ class FormContainer extends Component {
     event.preventDefault()
     let createdWorkout;
     createdWorkout = {
-      date: this.state.date,
+      performed_on: this.state.performed_on,
       location: this.state.location,
       review: this.state.review,
       goal: this.state.goal
@@ -49,18 +49,19 @@ class FormContainer extends Component {
         <form onSubmit={this.handleSubmit} className="callout">
           <div className="workout-form grid-container">
             <div className="grid-x grid-padding-x workout-form-label">
-
-            <div className="medium-6 cell">
-              <label className="workout-form-label" htmlFor="date">Date</label>
+              <img className="dost-thou" src="https://i.kym-cdn.com/photos/images/original/000/428/258/e29.jpg"/>
+            <div className="medium-4 cell">
+              <label className="workout-form-label" htmlFor="performed_on">Date</label>
               <TextField
                 type="date"
-                handleChange = {this.handleDateChange}
-                content = {this.state.date}
+                handleChange = {this.handlePerformedOnChange}
+                content = {this.state.performed_on}
               />
             </div>
 
 
-            <div className="medium-6 cell">
+
+            <div className="medium-4 cell">
             <label className="workout-form-label" htmlFor="location">Location (Where was it?)</label>
             <TextField
               type="text"
@@ -69,7 +70,7 @@ class FormContainer extends Component {
             />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-4 cell">
             <label className="workout-form-label" htmlFor="review">Review (how did you feel?)</label>
             <TextField
               type="text"
@@ -78,7 +79,7 @@ class FormContainer extends Component {
             />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-4 cell">
             <label className="workout-form-label" htmlFor="Goals">Goals for next workout</label>
             <TextField
               type="text"

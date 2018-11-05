@@ -9,24 +9,25 @@
 
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 </head>
 <body>
 
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">Maxed Out</a></h1>
+        <h1><a id="title-site" href="/">Maxed Out</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><a href="/users/<%=current_user.id%>">Profile</a></li>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li><a id="title-site" href="/users/<%=current_user.id%>">Profile</a></li>
+          <li class"title-site"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, id: "title-site" %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path, id: "title-site" %></li>
+          <li><%= link_to 'Sign In', new_user_session_path, id: "title-site" %></li>
         <%- end -%>
       </ul>
     </section>

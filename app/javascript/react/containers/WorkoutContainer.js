@@ -44,16 +44,15 @@ class WorkoutContainer extends Component {
   render() {
     return (
       <div>
-      <div className="holley">
-        <h1>Lets go!</h1>
-        <h1>Lift some weights!</h1>
-      </div>
+
       <div>
         <h1 className="workout-banner"> Let's make a workout! </h1>
+          <div className="holley">
+          </div>
+          <br/>
         <FormContainer
           addWorkout = {this.addWorkout}
           />
-          <img className="dost-thou" src="https://i.kym-cdn.com/photos/images/original/000/428/258/e29.jpg"/>
       </div>
 
       <ToastContainer

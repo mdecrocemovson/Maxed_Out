@@ -1,21 +1,72 @@
 .user-info {
-  color: white;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  color: #954f3a;
 }
 
+.user-account {
+  color: #834533;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+}
+
+.user-email {
+  color: #834533
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+}
+
+.total-workouts {
+  color:#834533;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+
+}
 .user-time {
+  color: #834533;
   padding-left: 20px;
+  font-family: 'Russo One', sans-serif;
+}
+
+.maxes {
+  color: #BF735C;
 }
 
 
 .user-lifts {
   padding-left: 20px;
+  color: #834533;
+  font-family: 'Russo One', sans-serif;
+}
+
+.your-lifts {
+  color: #834533;
+  text-align: center;
 }
 
 .user-div {
   padding: 20px;
+  font-family: 'Russo One', sans-serif;
 }
 
 .user-logo {
   font-size: 50px;
   text-decoration: underline;
+  font-family: 'Russo One', sans-serif;
+}
+
+.chart-header {
+  color: white;
+  font-family: 'Russo One', sans-serif;
+}
+
+.chart-div {
+  padding: 10px;
+  background-color: white;
+}
+
+.chart {
+  margin: auto;
+  border: 2px white;
+  padding: 20px;
 }

@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_10_30_151433) do
 
   create_table "workouts", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.date "date", null: false
+    t.date "performed_on", null: false
     t.string "location", null: false
     t.string "goal", null: false
     t.string "review"

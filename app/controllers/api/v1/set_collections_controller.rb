@@ -1,5 +1,5 @@
 class Api::V1::SetCollectionsController < ApiController
-
+  before_action :authenticate_user!
 
   def create
     set_collection = SetCollection.new(set_collection_params)
@@ -18,8 +18,12 @@ class Api::V1::SetCollectionsController < ApiController
   end
 
   def index
-    set_collections = SetCollection.all
-    render json: set_collections
+    # set_collections = SetCollection.all
+    render json: GraphSerializer.new(current_user).to_json
+  end
+
+  def show
+    render json: current_user.set_collections.where(exercise_id: params[:id])
   end
 
   def destroy
