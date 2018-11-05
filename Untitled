@@ -1,0 +1,13 @@
+{
+  exercises: [
+    {
+      name: 'Bench Press',
+      description: 'blah',
+      set_collections: [
+        {}.
+        {},
+        {}``
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @workouts = Workout.all
+    @workouts = Workout.all.order(performed_on: :desc)
   end
 
   def new

@@ -17,7 +17,7 @@ class WorkoutShow extends Component {
       user_deadlift_max: "",
       workout_id: "",
       user_id: "",
-      date: "",
+      performed_on: "",
       location: "",
       review: "",
       goal: "",
@@ -111,7 +111,7 @@ class WorkoutShow extends Component {
         if (body.exercise_id == 1){
           this.checkBenchMax(body.weight)
         } else if (body.exercise_id == 2) {
-          this.checkSquathMax(body.weight)
+          this.checkSquatMax(body.weight)
         } else if (body.exercise_d == 3){
           this.checkDeadliftMax(body.weight)
         }
@@ -151,8 +151,10 @@ class WorkoutShow extends Component {
       {
         method: 'DELETE',
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json'
-        }
+        },
+      credentials: 'same-origin'
       })
       .then(response => {
         if (response.ok) {
@@ -184,7 +186,7 @@ class WorkoutShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({workout_id: body["id"], user_id: body["user_id"], date: body["date"], location: body["location"], review: body["review"], goal: body["goal"], set_collections: body["set_collections"]})
+      this.setState({workout_id: body["id"], user_id: body["user_id"], performed_on: body["performed_on"], location: body["location"], review: body["review"], goal: body["goal"], set_collections: body["set_collections"]})
     })
   }
 
@@ -193,7 +195,7 @@ class WorkoutShow extends Component {
       <div>
         <div className="workout-description">
         <WorkoutDescription
-          date = {this.state.date}
+          performed_on = {this.state.performed_on}
           location = {this.state.location}
           review = {this.state.review}
           goal = {this.state.goal}
@@ -205,7 +207,7 @@ class WorkoutShow extends Component {
           handleDelete = {this.handleSetCollectionDelete}
           />
         </div>
-        <h1 id="add_sets">Let's add some damn sets and reps to this why don't we??</h1>
+
         <div className="set-collection-form">
         {this.state.errors}
         <SetCollectionForm

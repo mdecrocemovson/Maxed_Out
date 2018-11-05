@@ -75,6 +75,7 @@ class SetCollectionForm extends Component {
       <div>
       <div>
         {this.state.errors}
+        <h1 id="add_sets">Let's add some sets and reps to this why don't we??</h1>
         <form onSubmit={this.handleSubmit} className="callout">
           <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
@@ -111,7 +112,7 @@ class SetCollectionForm extends Component {
                 content = {this.state.exercise_id}
               />
             </div>
-            <input type="submit" className="button submit-workout-button" value="Submit"/>
+            <input type="submit" className="button submit-workout-button submit-set-collection" value="Submit"/>
           </div>
         </div>
       </form>

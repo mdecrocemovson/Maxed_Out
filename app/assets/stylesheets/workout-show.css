@@ -1,28 +1,35 @@
 #workout-date {
   color: white;
+  font-family: 'Russo One', sans-serif;
 }
 #workout-location {
   color: white;
+  font-family: 'Russo One', sans-serif;
 }
 #workout-review {
   color: white;
+  font-family: 'Russo One', sans-serif;
 }
 #workout-goal {
   color: white;
+  font-family: 'Russo One', sans-serif;
 }
 
 #add_sets {
-  color: purple;
+  color: #D36786;
+  font-family: 'Russo One', sans-serif;
 }
 
 .set-collection-header {
-  color: #1F6764;
+  color: #CD5476;
+  font-family: 'Russo One', sans-serif;
 }
 
 .workout-description {
   padding: 10px;
   border: 2px solid;
   margin: 20px 0px 20px 0px;
+  font-family: 'Russo One', sans-serif;
 }
 
 .set-collecton-show {
@@ -30,22 +37,36 @@
   border: 2px solid;
   padding: 20px;
   clear:left;
+  font-family: 'Russo One', sans-serif;
 }
 
 .set-collection-form {
   margin: 10px 0px 10px 0px;
   padding: 20px;
   border: 2px solid;
+  font-family: 'Russo One', sans-serif;
 }
 #guy-lifting {
   height: 200px;
+  font-family: 'Russo One', sans-serif;
 }
 
 .exercise-name {
   color:#E47C5D;
+  font-family: 'Russo One', sans-serif;
 }
 
 .user-input {
   font-weight: bolder;
   color: #C74066;
+  font-family: 'Russo One', sans-serif;
+}
+
+.submit-set-collection {
+  background-color: #D87B95;
+  font-family: 'Russo One', sans-serif;
+}
+.delete-set-collection {
+  background-color: #D87B95;
+  font-family: 'Russo One', sans-serif;
 }

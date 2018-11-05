@@ -4,6 +4,11 @@
   background-repeat: space;
   background-position: center;
   text-align: center;
+  padding: 20em;
+}
+
+#title-site {
+  font-family: 'Russo One', sans-serif;
 }
 
 .workout-form {
@@ -12,12 +17,15 @@
 
 .new-workout-button {
     border: 2px;
-    background-color: #4CAF50;
+    background-color: #4B97AC;
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    border-radius: 20px;
+    font-size: 20px;
+}
+
+body button {
+  font-family: 'Russo One', sans-serif;
 }
 
 .add-workout {
@@ -30,6 +38,7 @@ body {
   background-color: #202020;
   color: white;
   padding-left: 10px;
+  font-family: 'Russo One', sans-serif;
 }
 
 .workouts {
@@ -39,18 +48,17 @@ body {
 .workout-counter {
   color:#6BACBF;
   font-size: 35px;
-  font-family: 'Hammersmith One', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 
 .index-logo {
-  background-image: url("nerd-to-hero");
   text-align: center;
   font-size: 35px;
-  padding: 2.5em;
+  padding: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
-  font-family: 'Hammersmith One', sans-serif;
+  color: #43879A;
+  font-family: 'Russo One', sans-serif;
 }
 
 
@@ -59,8 +67,20 @@ body {
   font-size: 20px;
 }
 .button-to {
-  background-color: #67434F;
   font-size: 20px;
+  background-color: #6BACBF;
+  border: 2px;
   color: white;
   padding: 10px;
+  font-family: 'Russo One', sans-serif;
+}
+
+#index-bear {
+  background-image: url("http://1.bp.blogspot.com/-ClFbGcSfgv4/VZFFgvyZo6I/AAAAAAAAB20/FN0w8DMB7ko/s1600/strong-weak.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px;
+}
+#index-bear p {
+  visibility: hidden;
 }
