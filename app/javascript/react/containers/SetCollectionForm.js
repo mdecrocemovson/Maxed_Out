@@ -112,7 +112,9 @@ class SetCollectionForm extends Component {
                 content = {this.state.exercise_id}
               />
             </div>
-            <input type="submit" className="button submit-workout-button submit-set-collection" value="Submit"/>
+            <div id="submit-button-set-collections-div">
+              <input type="submit" className="button submit-set-collection" value="Submit"/>
+            </div>
           </div>
         </div>
       </form>

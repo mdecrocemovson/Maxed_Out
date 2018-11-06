@@ -6,11 +6,30 @@
   text-align: center;
   padding: 16em;
 }
+#sign-up {
+  font-family: 'Economica', sans-serif !important;
+}
 
-#title-site {
+#sign-in {
+  font-family: 'Economica', sans-serif !important;
+}
+
+.title-site {
   font-family: 'Economica', sans-serif;
-  font-size: 30px;
-  background-color: #333333;
+}
+
+.top-bar {
+  background-color: #2d2d2d;
+  font-family: 'Economica', sans-serif;
+}
+
+.title-area {
+  background-color: #2d2d2d !important;
+  font-family: 'Economica', sans-serif;
+  color:#ffae19
+}
+#top-bar-devise {
+  font-family: 'Economica', sans-serif;
 }
 body {
   background-color: #202020;
@@ -23,6 +42,8 @@ body {
 .new-workout-button {
     border: 2px;
     background-color: #ffae19;
+    padding: 20px;
+    margin-top: 10px;
     color: black;
     text-align: center;
     text-decoration: none;

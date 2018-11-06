@@ -10,7 +10,7 @@
 
 .submit-workout-button {
   background-color: #800000;
-  padding-left: 20px;
+  padding: 20px;
 }
 #submit-workout-button {
   text-align: center;
@@ -29,5 +29,9 @@
 }
 
 .form_input {
-  font-size: 500px;
+  font-size: 20px;
+}
+
+.submit-workout-button-div {
+  margin:auto;
 }

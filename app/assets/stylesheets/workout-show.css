@@ -16,12 +16,13 @@
 }
 
 #add_sets {
-  color: #D36786;
+  color: #ffae19;
+  text-align: center;
   font-family: 'Economica', sans-serif;
 }
 
 .set-collection-header {
-  color: #CD5476;
+  color: #ffae19;
   font-size: 35px;
   font-family: 'Economica', sans-serif;
 }
@@ -54,26 +55,35 @@
 }
 
 .exercise-name {
-  color:#E47C5D;
+  color:#ffae19;
   font-size: 30px;
   font-family: 'Economica', sans-serif;
 }
 
 .user-input {
   font-weight: bolder;
-  color: #C74066;
+  color: #ffae19;
   font-family: 'Economica', sans-serif;
 }
 
 .submit-set-collection {
-  background-color: #D87B95;
+  background-color: #ffae19;
   font-family: 'Economica', sans-serif;
+  padding: 30px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 .delete-set-collection {
-  background-color: #D87B95;
+  background-color: #ffae19;
+  padding: 15px;
+  margin-bottom: 20px;
   font-family: 'Economica', sans-serif;
 }
 
 #set-collection-form {
   background-color: #202020;
+}
+
+#submit-button-set-collections-div {
+  margin: auto;
 }

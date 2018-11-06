@@ -78,6 +78,7 @@ class FormContainer extends Component {
             <label className="workout-form-label" htmlFor="review">Review (how did you feel?)</label>
             <TextField
               type="text"
+              placeholder="Tired, Hungry, etc."
               handleChange = {this.handleReviewChange}
               content = {this.state.review}
             />
@@ -87,12 +88,14 @@ class FormContainer extends Component {
             <label className="workout-form-label" htmlFor="Goals">Goals for next workout</label>
             <TextField
               type="text"
+              placeholder="Get 225 on bench, beat my PR, etc."
               handleChange = {this.handleGoalChange}
               content = {this.state.goal}
             />
             </div>
-
+            <div className="submit-workout-button-div">
             <input type="submit" id="submit-workout" className=" submit-workout-button" value="Submit"/>
+            </div>
           </div>
         </div>
       </form>
