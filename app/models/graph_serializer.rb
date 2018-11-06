@@ -1,4 +1,4 @@
-class GraphSerializer < ActiveModel::Serializer
+class GraphOrganizer < ActiveModel::Serializer
   attributes :current_user, :bench_presses, :deadlifts, :squats
 
   def bench_presses
