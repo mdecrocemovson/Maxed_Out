@@ -10,11 +10,14 @@
 
 .submit-workout-button {
   background-color: #800000;
+  padding-left: 20px;
+}
+#submit-workout-button {
+  text-align: center;
 }
 
 .dost-thou {
   height: 350px;
-  float: right;
 }
 
 .workout-form-label {

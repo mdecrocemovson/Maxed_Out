@@ -19,7 +19,7 @@ const SetCollectionShow = (props) => {
   return (
     <div>
     <div>
-      <img id="guy-lifting" src="https://i2.wp.com/myzone-strengtheory.netdna-ssl.com/wp-content/uploads/2015/09/mariusz.jpg?w=736&ssl=1"/>
+      <img className="dost-thou" src="http://assets.schwarzenegger.com/uploads/images/index/cache/1a44b4a15853cd473d365ad724404c9d_608_334_c1.jpg"/>
       <h3 className="set-collection-header">Here are the sets you performed! (nice job stud this looks good)</h3>
       {exercises}
     </div>

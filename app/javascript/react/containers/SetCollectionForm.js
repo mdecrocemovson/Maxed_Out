@@ -80,7 +80,7 @@ class SetCollectionForm extends Component {
           <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
               <label className="workout-form-label" htmlFor="sets">Sets</label>
               <TextField
               type="number"
@@ -89,7 +89,7 @@ class SetCollectionForm extends Component {
               />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="reps">Reps</label>
             <TextField
               type="number"
@@ -98,7 +98,7 @@ class SetCollectionForm extends Component {
             />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="weight">Weight</label>
             <TextField
               type="number"

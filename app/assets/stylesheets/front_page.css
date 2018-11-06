@@ -12,7 +12,7 @@
   font-size: 30px;
   background-color: #333333;
 }
-* {
+body {
   background-color: #202020;
 }
 
@@ -64,6 +64,7 @@ body {
   background-position: center;
   color: #ffa500;
   font-family: 'Economica', sans-serif;
+  background-color: #202020;
 }
 
 
@@ -90,7 +91,10 @@ body {
 .workout {
   border: 2px solid white;
   padding: 10px;
-  margin: 10px 20px 10px 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 

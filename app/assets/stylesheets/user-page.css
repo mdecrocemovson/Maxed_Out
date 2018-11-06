@@ -31,6 +31,10 @@
 
 .maxes {
   color: #FF4E50;
+  text-decoration: underline;
+  font-size: 50px;
+  font-family: 'Economica', sans-serif;
+  text-align: center;
 }
 
 
@@ -82,4 +86,8 @@
 }
 .background-chart {
   background-color: #202020;
+}
+
+.log-in-button {
+  background-color: #333333;
 }
