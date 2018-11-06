@@ -1,6 +1,7 @@
 #workout-date {
   color: white;
   font-family: 'Economica', sans-serif;
+  font-size: 40px;
 }
 #workout-location {
   color: white;
@@ -23,7 +24,8 @@
 
 .set-collection-header {
   color: #ffae19;
-  font-size: 35px;
+  text-decoration: underline;
+  font-size: 45px;
   font-family: 'Economica', sans-serif;
 }
 

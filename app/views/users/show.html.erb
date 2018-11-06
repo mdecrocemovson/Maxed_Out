@@ -9,11 +9,11 @@
 </div>
 
 
-<!-- <div class="grid-container"> -->
-  <div class="row small-up-2 medium-up-3">
+<div class="grid-container">
+  <div class="small-up-2 medium-up-3">
     <div class="column">
       <div class="card lift-card">
-        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2017/06/back-squat.jpg?itok=FiaJ_qzS&timestamp=1498572015">
+        <img class="img-card" src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2017/06/back-squat.jpg?itok=FiaJ_qzS&timestamp=1498572015"/>
         <div class="card-section">
           <h4 class="user-info user-lifts">Squat: <%=@user.max_squat %> </h4>
         </div>
@@ -21,7 +21,7 @@
     </div>
     <div class="column">
       <div class="card lift-card">
-        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg">
+        <img class="img-card" src="http://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg"/>
         <div class="card-section">
           <h4 class="user-info user-lifts">Bench: <%=@user.max_bench_press%></h4>
         </div>
@@ -29,13 +29,14 @@
     </div>
     <div class="column">
       <div class="card lift-card">
-        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2016/05/how_to_deadlift_b.jpg?itok=zOHIQ-nK&timestamp=1462980040">
+        <img class="img-card" src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2016/05/how_to_deadlift_b.jpg?itok=zOHIQ-nK&timestamp=1462980040"/>
         <div class="card-section">
           <h4 class="user-info user-lifts">Deadlift: <%=@user.max_dead_lift%> </h4>
         </div>
       </div>
     </div>
   </div>
+</div>
 
   <h3 class="user-info"> Accountable? <%=@user.accountability_switch %> </h3>
   <% if @user.accountability_switch %>

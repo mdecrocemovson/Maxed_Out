@@ -10,6 +10,15 @@
   font-family: 'Economica', sans-serif !important;
 }
 
+.title-area {
+  font-size: 30px;
+  color:#ffae19;
+}
+.title-site {
+  font-size: 30px;
+  color:#ffae19;
+}
+
 #sign-in {
   font-family: 'Economica', sans-serif !important;
 }
@@ -93,6 +102,7 @@ body {
   text-align: center;
   font-size: 20px;
 }
+
 .button-to {
   font-size: 20px;
   background-color: #ffb732;
@@ -125,4 +135,8 @@ body {
 
 #index-bear p {
   visibility: hidden;
+}
+
+#project-name {
+  color:#ffae19;
 }
