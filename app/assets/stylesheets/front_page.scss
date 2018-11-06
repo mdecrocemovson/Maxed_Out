@@ -1,5 +1,5 @@
 .holley {
-  background-image: image_path('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*')
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*');
   color: white;
   background-repeat: space;
   background-position: center;
@@ -115,7 +115,7 @@ body {
 }
 
 #index-bear {
-  background-image: image_path("https://www.t-nation.com/system/publishing/articles/10005963/original/The-Deadlift-The-Nervous-System.jpg?1519170189");
+  background-image: url("https://www.t-nation.com/system/publishing/articles/10005963/original/The-Deadlift-The-Nervous-System.jpg?1519170189");
   background-position: center;
   background-repeat: no-repeat;
   padding: 140px;
