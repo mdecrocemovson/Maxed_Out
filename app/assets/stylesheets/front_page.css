@@ -1,5 +1,5 @@
 .holley {
-  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*');
+  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*')
   color: white;
   background-repeat: space;
   background-position: center;
@@ -17,6 +17,8 @@
 .title-site {
   font-size: 30px;
   color:#ffae19;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 #sign-in {

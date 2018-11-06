@@ -11,7 +11,7 @@ const SetCollectionShow = (props) => {
     return (
       <div key = {set.id}>
       <h4 className="exercise-name" key={set.id}>{set.exercise.name}:</h4>
-        <p className="exercise-name">sets: {set.sets}, reps: {set.reps}, weight: {set.weight}</p>
+        <p className="sets-reps-name">sets: {set.sets}, reps: {set.reps}, weight: {set.weight}</p>
         <button className="delete-set-collection" onClick = {deleteSetCollection}>Delete Review</button>
       </div>
       )

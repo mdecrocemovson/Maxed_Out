@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Chart } from "react-google-charts";
 
-const options = {
-  title: "Please just let me die",
-  curveType: "function",
-  legend: { position: "bottom" }
-};
+
 
 class UserGraph extends Component {
   constructor(props) {
@@ -101,7 +97,6 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataBench}
-              options={options}
               width="60%"
               height="600px"
               legendToggle
@@ -114,7 +109,6 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataSquat}
-              options={options}
               width="60%"
               height="600px"
               legendToggle
@@ -127,7 +121,6 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataDead}
-              options={options}
               width="60%"
               height="600px"
               legendToggle

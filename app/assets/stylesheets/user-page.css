@@ -2,7 +2,7 @@
   text-align: center;
   font-family: 'Economica', sans-serif;
   color: #FF4E50;
-  font-size: 35px;
+  font-size: 50px;
 }
 
 .user-account {
@@ -86,6 +86,15 @@
 }
 .background-chart {
   background-color: #202020;
+}
+
+.float-user-info {
+  float:right;
+  margin: 30px;
+  font-size: 40px;
+}
+.user-lifts-and-pic {
+  margin: 20px;
 }
 
 .log-in-button {
