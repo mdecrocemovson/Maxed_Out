@@ -1,14 +1,19 @@
 .holley {
-  background-image:url('holley_mangold.jpg');
+  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*');
   color: white;
   background-repeat: space;
   background-position: center;
   text-align: center;
-  padding: 20em;
+  padding: 16em;
 }
 
 #title-site {
   font-family: 'Economica', sans-serif;
+  font-size: 30px;
+  background-color: #333333;
+}
+body {
+  background-color: #202020;
 }
 
 .workout-form {
@@ -17,11 +22,11 @@
 
 .new-workout-button {
     border: 2px;
-    background-color: #4B97AC;
-    color: white;
+    background-color: #ffae19;
+    color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 body button {
@@ -32,12 +37,12 @@ body button {
   text-align: center;
   align: center;
   padding-top: 10px;
+
 }
 
 body {
   background-color: #202020;
   color: white;
-  padding-left: 10px;
   font-family: 'Economica', sans-serif;
 }
 
@@ -46,19 +51,20 @@ body {
 }
 
 .workout-counter {
-  color:#6BACBF;
-  font-size: 35px;
+  color:#ffae19;
+  font-size: 40px;
   font-family: 'Economica', sans-serif;
 }
 
 .index-logo {
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   padding: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  color: #43879A;
+  color: #ffa500;
   font-family: 'Economica', sans-serif;
+  background-color: #202020;
 }
 
 
@@ -68,7 +74,7 @@ body {
 }
 .button-to {
   font-size: 20px;
-  background-color: #6BACBF;
+  background-color: #ffb732;
   border: 2px;
   color: white;
   padding: 10px;
@@ -79,8 +85,23 @@ body {
   background-image: url("https://www.t-nation.com/system/publishing/articles/10005963/original/The-Deadlift-The-Nervous-System.jpg?1519170189");
   background-position: center;
   background-repeat: no-repeat;
-  padding: 200px;
+  padding: 140px;
 }
+
+.workout {
+  border: 2px solid white;
+  padding: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.workout p {
+  font-size: 30px;
+}
+
 #index-bear p {
   visibility: hidden;
 }

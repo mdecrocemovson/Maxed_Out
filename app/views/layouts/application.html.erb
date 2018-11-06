@@ -11,8 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-  <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?key=#{ENV[GOOGLE_MAPS_KEY]}&libraries=places></script>
-
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARpyx2vtwIUaTUlGRDYehEAjSnudmtW2E&libraries=places"></script>
 </head>
 <body>
 
@@ -23,7 +22,7 @@
       </li>
     </ul>
 
-    <section class="top-bar-section">
+    <section class="top-bar-section top-bar-right">
       <ul class="right">
         <%- if current_user -%>
           <li><a id="title-site" href="/users/<%=current_user.id%>">Profile</a></li>

@@ -76,11 +76,11 @@ class SetCollectionForm extends Component {
       <div>
         {this.state.errors}
         <h1 id="add_sets">Let's add some sets and reps to this why don't we??</h1>
-        <form onSubmit={this.handleSubmit} className="callout">
+        <form onSubmit={this.handleSubmit} className="callout" id="set-collection-form">
           <div className="grid-container">
             <div className="grid-x grid-padding-x set-collection-form-label">
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
               <label className="workout-form-label" htmlFor="sets">Sets</label>
               <TextField
               type="number"
@@ -89,7 +89,7 @@ class SetCollectionForm extends Component {
               />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="reps">Reps</label>
             <TextField
               type="number"
@@ -98,7 +98,7 @@ class SetCollectionForm extends Component {
             />
             </div>
 
-            <div className="medium-6 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="weight">Weight</label>
             <TextField
               type="number"

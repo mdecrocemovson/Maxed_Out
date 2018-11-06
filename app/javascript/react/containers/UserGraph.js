@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Chart } from "react-google-charts";
 
+const options = {
+  title: "Please just let me die",
+  curveType: "function",
+  legend: { position: "bottom" }
+};
+
 class UserGraph extends Component {
   constructor(props) {
     super(props);
@@ -62,13 +68,7 @@ class UserGraph extends Component {
       this.setState({deadlift_array: body})
     }))
   }
-
   render() {
-    const options = {
-      title: "Age vs. Weight comparison",
-      legend: {position: "bottom"},
-      vAxis: { title: "Weight", viewWindow: { min: 0, max: 15 } }
-    }
     let benchCounter = 0;
     let squatCounter = 0;
     let deadCounter = 0;
@@ -94,7 +94,7 @@ class UserGraph extends Component {
       deadCounter = deadCounter + 1;
     }
     return(
-      <div>
+      <div className="background-chart">
         <div className="chart-div">
           <div className={"my-pretty-chart-container"}>
             <Chart

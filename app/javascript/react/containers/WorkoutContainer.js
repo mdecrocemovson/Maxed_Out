@@ -46,7 +46,7 @@ class WorkoutContainer extends Component {
       <div>
 
       <div>
-        <h1 className="workout-banner"> Let's make a workout! </h1>
+        <h1 className="workout-banner"> Let's track a workout! </h1>
           <div className="holley">
           </div>
           <br/>

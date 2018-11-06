@@ -43,10 +43,27 @@
     <%= f.text_field :max_dead_lift %>
   </div>
 
+  <div class="field">
+    <%= f.label :accountability, "Do you want to be held accountable for missing workouts?", class: "user-info"%>
+    <%= f.check_box :accountability_switch %>
+  </div>
 
+  <div class="field">
+    <%= f.label :workouts_per_Week, "How many workouts are you signing up for per week?", class: "user-info"%>
+    <%= f.text_field :workouts_per_week %>
+  </div>
+
+  <div class="field">
+    <%= f.label :accountability_buddy_email, "What is your accountability buddy's email?", class: "user-info"%>
+    <%= f.text_field :accountability_buddy_email %>
+  </div>
+  <div class="field">
+    <%=f.label :dollar_amount, "How much would you like to stake on completing those workouts/week?", class: "user-info"%>
+    <%=f.text_field :dollar_amount %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "user-info" %>
   </div>
 <% end %>
 

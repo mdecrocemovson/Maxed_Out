@@ -2,13 +2,48 @@
   <h1 class="user-info user-logo"> Your information </h1>
   <h2 class="user-account">Your account </h2>
   <h4 class="user-info user-email"> <%= @user.email %> </h4>
-  <h4 class="total-workouts user-info"> <%= @user.workouts.length %> workout tracked!! </h4>
+  <h4 class="total-workouts user-info"> <%= @user.workouts.length %> workouts tracked!! </h4>
   <p class="user-info user-time">Created on: <%= @user.created_at.month  %>/<%= @user.created_at.day %>/<%= @user.created_at.year %></p>
 
-  <h2 class="user-info maxes"> Your maxes! </h2>
-  <h3 class="user-info user-lifts"> Squat: <%=@user.max_squat%> </h3>
-  <h3 class="user-info user-lifts"> Bench: <%=@user.max_bench_press%> </h3>
-  <h3 class="user-info user-lifts"> Deadlift: <%=@user.max_dead_lift%> </h3>
+  <h2 class="maxes"> Your maxes! </h2>
+</div>
+
+
+<!-- <div class="grid-container"> -->
+  <div class="row small-up-2 medium-up-3">
+    <div class="column">
+      <div class="card lift-card">
+        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2017/06/back-squat.jpg?itok=FiaJ_qzS&timestamp=1498572015">
+        <div class="card-section">
+          <h4 class="user-info user-lifts">Squat: <%=@user.max_squat %> </h4>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card lift-card">
+        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg">
+        <div class="card-section">
+          <h4 class="user-info user-lifts">Bench: <%=@user.max_bench_press%></h4>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card lift-card">
+        <img src="http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/2016/05/how_to_deadlift_b.jpg?itok=zOHIQ-nK&timestamp=1462980040">
+        <div class="card-section">
+          <h4 class="user-info user-lifts">Deadlift: <%=@user.max_dead_lift%> </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="user-info"> Accountable? <%=@user.accountability_switch %> </h3>
+  <% if @user.accountability_switch %>
+    <h3 class="user-info"> Workouts/Week?: <%=@user.workouts_per_week %> </h3>
+    <h3 class="user-info"> Accountability Buddy Email:  <%=@user.accountability_buddy_email%> </h3>
+    <h3 class="user-info"> Dollar Amount: <%=@user.dollar_amount %> </h3>
+  <% end%>
+  <br>
 
 </div>
   <h2 class="user-info">Your lifts over time</h2>

@@ -54,11 +54,11 @@ class FormContainer extends Component {
     console.log(this.state)
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className="callout">
+        <form onSubmit={this.handleSubmit} className="callout" id="set-collection-form">
           <div className="workout-form grid-container">
             <div className="grid-x grid-padding-x workout-form-label">
-              <img className="dost-thou" src="https://i.kym-cdn.com/photos/images/original/000/428/258/e29.jpg"/>
-            <div className="medium-4 cell">
+
+            <div className="medium-12 cell">
               <label className="workout-form-label" htmlFor="performed_on">Date</label>
               <TextField
                 type="date"
@@ -67,19 +67,14 @@ class FormContainer extends Component {
               />
             </div>
 
-
-
-            <div className="medium-4 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="location">Location (Where was it?)</label>
               <LocationSearchInput
                 value = {this.state.location}
                 onChange = {this.handleLocationSelection}
                 />
             </div>
-
-
-
-            <div className="medium-4 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="review">Review (how did you feel?)</label>
             <TextField
               type="text"
@@ -88,7 +83,7 @@ class FormContainer extends Component {
             />
             </div>
 
-            <div className="medium-4 cell">
+            <div className="medium-12 cell">
             <label className="workout-form-label" htmlFor="Goals">Goals for next workout</label>
             <TextField
               type="text"
@@ -97,9 +92,7 @@ class FormContainer extends Component {
             />
             </div>
 
-
-
-            <input type="submit" className="button submit-workout-button" value="Submit"/>
+            <input type="submit" id="submit-workout" className=" submit-workout-button" value="Submit"/>
           </div>
         </div>
       </form>
