@@ -19,7 +19,7 @@ class Api::V1::SetCollectionsController < ApiController
 
   def index
     # set_collections = SetCollection.all
-    render json: GraphSerializer.new(current_user).to_json
+    render json: SetCollectionSerializer.new(current_user).to_json
   end
 
   def show
