@@ -57,7 +57,13 @@
 }
 
 .exercise-name {
-  color:#ffae19;
+  color:white;
+  font-size: 35px;
+  font-family: 'Economica', sans-serif;
+}
+
+.sets-reps-name {
+  color: #ffae19;
   font-size: 30px;
   font-family: 'Economica', sans-serif;
 }
