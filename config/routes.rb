@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
+  mount Sidekiq::Web => "/sidekiq"
   root 'workouts#index'
+  post 'users/hold_accountable' => 'users#hold_accountable', as: :report
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users, only: [:show]
   resources :workouts do

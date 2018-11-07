@@ -1,7 +1,7 @@
 .holley {
   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/articles/2016/10/lifting-1491929408.jpg?resize=4128:*');
   color: white;
-  background-repeat: space;
+  background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   padding: 16em;
@@ -83,7 +83,7 @@ body {
 }
 
 .workout-counter {
-  color:#ffae19;
+  color:white;
   font-size: 40px;
   font-family: 'Economica', sans-serif;
 }
@@ -106,11 +106,11 @@ body {
 }
 
 .button-to {
-  font-size: 20px;
+  font-size: 30px;
   background-color: #ffb732;
   border: 2px;
   color: white;
-  padding: 10px;
+  padding: 20px;
   font-family: 'Economica', sans-serif;
 }
 
@@ -122,10 +122,11 @@ body {
 }
 
 .workout {
-  border: 2px solid white;
+  border: 3px solid white;
+  color: #ffae19;
   padding: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 240px;
+  margin-right: 240px;
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
@@ -141,4 +142,37 @@ body {
 
 #project-name {
   color:#ffae19;
+}
+
+.social-footer {
+  padding: 1rem;
+  background: #2D2D2D;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #2D2D2D;
+  transition: color 0.3s ease-in;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
 }

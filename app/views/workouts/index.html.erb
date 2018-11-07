@@ -20,8 +20,9 @@
       <% counter += 1 %>
         <p>You were at "<%= workout.location %>"</p>
         <p> The goals you set were: "<%= workout.goal %>" </p>
-        <p> You described the workout as <%= workout.review %> </p>
-        <a class="button-link"><%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %></a>
+        <p> You described the workout as "<%= workout.review %>" </p>
+        <i class="fa fa-2x fa-trash" aria-hidden="true"></i>
+        <%= button_to 'Delete Workout', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-to"  %>
         <br/>
       </div>
         <% end %>
