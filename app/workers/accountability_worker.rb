@@ -5,6 +5,6 @@ class AccountabilityWorker
 
   def perform
     puts "sidekiq is working..."
-    AccountabilityMailer.new_email
+    AccountabilityMailer.new_email.deliver_now
   end
 end
