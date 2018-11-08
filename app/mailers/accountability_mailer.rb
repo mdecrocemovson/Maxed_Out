@@ -1,3 +1,5 @@
+require_relative '../workers/accountability_worker'
+
 class AccountabilityMailer < ApplicationMailer
   def new_email
     mail(
