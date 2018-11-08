@@ -17,13 +17,13 @@
 }
 
 #add_sets {
-  color: #ffae19;
+  color: white;
   text-align: center;
   font-family: 'Economica', sans-serif;
 }
 
 .set-collection-header {
-  color: #ffae19;
+  color: white;
   text-decoration: underline;
   font-size: 45px;
   font-family: 'Economica', sans-serif;
@@ -42,6 +42,7 @@
   padding: 20px;
   clear:left;
   font-family: 'Economica', sans-serif;
+  overflow: auto;
 }
 
 .set-collection-form {

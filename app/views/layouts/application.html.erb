@@ -3,6 +3,7 @@
 <head>
   <title>Maxed Out</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="rgnEpUvGEDBH-WqynQUHbmunR8vtE9le0tfgi4C_UgE" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -40,6 +41,7 @@
 
   <%= yield %>
 
+
   <%= javascript_include_tag 'application' %>
 
   <%- if Rails.env.development? || Rails.env.test? -%>
@@ -48,7 +50,13 @@
     <%- end -%>
   <%- end -%>
   <%= javascript_pack_tag 'application' %>
-
+  <footer class="social-footer">
+  <div class="social-footer-icons">
+    <ul class="menu simple">
+      <li><a href="https://www.linkedin.com/in/michael-decroce-movson/"><i class="fab fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://github.com/mdecrocemovson"><i class="fab fa-2x fa-github-square" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
   <%= yield :extra_footer %>
 </body>
 </html>
