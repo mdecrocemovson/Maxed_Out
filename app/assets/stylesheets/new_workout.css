@@ -1,11 +1,12 @@
 .workout-banner {
   text-align: center;
   font-family: 'Economica', sans-serif;
+  font-size:70px;
   color:white;
 }
 
 .workout-form-label {
-  color:white;
+  color:#ffae19;
 }
 
 .submit-workout-button {
@@ -35,4 +36,8 @@
 
 .submit-workout-button-div {
   margin:auto;
+}
+
+i {
+  padding-bottom: 20px;
 }

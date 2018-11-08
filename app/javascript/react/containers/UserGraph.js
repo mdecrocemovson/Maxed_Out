@@ -65,6 +65,24 @@ class UserGraph extends Component {
     }))
   }
   render() {
+    const benchOptions = {
+      chart: {
+        title: "Bench tracked over time",
+        subtitle: "   in lbs"
+      },
+    };
+    const squatOptions = {
+      chart: {
+        title: "  Squat tracked over time",
+        subtitle: " in lbs"
+      }
+    };
+    const deadliftOptions = {
+      chart: {
+        title: "  Deadlift Tracked Over Time",
+        subtitle: "  in lbs"
+      }
+    };
     let benchCounter = 0;
     let squatCounter = 0;
     let deadCounter = 0;
@@ -97,6 +115,7 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataBench}
+              options={benchOptions}
               width="60%"
               height="600px"
               legendToggle
@@ -109,6 +128,7 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataSquat}
+              options={squatOptions}
               width="60%"
               height="600px"
               legendToggle
@@ -121,6 +141,7 @@ class UserGraph extends Component {
               chartType="Line"
               className="chart"
               data={dataDead}
+              options={deadliftOptions}
               width="60%"
               height="600px"
               legendToggle

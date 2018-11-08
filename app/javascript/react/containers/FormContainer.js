@@ -51,7 +51,6 @@ class FormContainer extends Component {
   }
 
   render () {
-    console.log(this.state)
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="callout" id="set-collection-form">
