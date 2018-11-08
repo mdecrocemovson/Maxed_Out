@@ -86,9 +86,9 @@ class UserGraph extends Component {
     let benchCounter = 0;
     let squatCounter = 0;
     let deadCounter = 0;
-    let dataBench = [["Workout","Bench Press Logged"]]
-    let dataSquat = [["Workout", "Squat Logged"]]
-    let dataDead = [["Workout", "Deadlift Logged"]]
+    let dataBench = [["Workout","Bench Press Logged"], [0, 0]]
+    let dataSquat = [["Workout", "Squat Logged"], [0, 0]]
+    let dataDead = [["Workout", "Deadlift Logged"], [0, 0]]
     let benchLength = this.state.bench_press_array.length
     let squatLength = this.state.squat_array.length
     let deadLength = this.state.deadlift_array.length

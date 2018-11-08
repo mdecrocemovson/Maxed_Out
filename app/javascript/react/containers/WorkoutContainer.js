@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import FormContainer from './FormContainer'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import toast from '../components/toast';
 
 
 class WorkoutContainer extends Component {
