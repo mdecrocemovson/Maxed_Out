@@ -1,19 +1,19 @@
 <div class="user-div">
   <h1 class="user-info user-logo"> Your information </h1>
   <h4 class="user-info user-email"> <%= @user.email %> </h4>
-  <h4 class="total-workouts user-info"> <%= @user.workouts.length %> workouts tracked!! </h4>
+  <h4 class="total-workouts user-info"> <%= @user.workouts.length %> workouts tracked! </h4>
   <p class="user-info user-time">Created on: <%= @user.created_at.month  %>/<%= @user.created_at.day %>/<%= @user.created_at.year %></p>
+
+    <% if @user.accountability_switch %>
+    <h2 class="user-info user-email">You opted in for accountability: <%=@user.accountability_switch%></h2>
+    <h2 class="user-info user-email">Your accountability buddy's email: <%=@user.accountability_buddy_email %></h2>
+    <h2 class="user-info user-email">You wagered $<%=@user.dollar_amount %> that you would complete <%=@user.workouts_per_week %> workouts per week </h2>
+    <% end %>
 
   <h2 class="maxes"> Your maxes! </h2>
 </div>
 
-<div class="user-div">
-  <% if @user.accountability_switch %>
-  <h2 class="user-info user-email">You opted in for accountability: <%=@user.accountability_switch%></h2>
-  <h2 class="user-info user-email">Your accountability buddy's email: <%=@user.accountability_buddy_email %></h2>
-  <h2 class="user-info user-email">You wagered <%=@user.dollar_amount %> that you would complete <%=@user.workouts_per_week %> workouts per week </h2>
-</div>
-  <% end %>
+
 
 <div class="user-lifts-and-pic">
 <!-- take2 -->

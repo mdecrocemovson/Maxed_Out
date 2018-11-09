@@ -1,3 +1,5 @@
+require 'sidekiq-scheduler'
+
 class AccountabilityWorker
   include Sidekiq::Worker
 
