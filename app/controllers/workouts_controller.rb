@@ -12,11 +12,10 @@ class WorkoutsController < ApplicationController
         @workouts_in_last_week.push(workout)
       end
     end
-
     if (current_user.accountability_switch && @workouts_in_last_week.length <= current_user.workouts_per_week)
       @current_user_email = @current_user.email
       @current_user_workouts_per_week = @current_user.workouts_per_week
-      @current_user_buddy_email = @current_user.email
+      @current_user_buddy_email = @current_user.accountability_buddy_email
       @current_user_dollars = @current_user.dollar_amount
       AccountabilityWorker.perform_async(@current_user_email, @current_user_workouts_per_week, @current_user_buddy_email, @current_user_dollars)
     end

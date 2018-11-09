@@ -7,6 +7,14 @@
   <h2 class="maxes"> Your maxes! </h2>
 </div>
 
+<div class="user-div">
+  <% if @user.accountability_switch %>
+  <h2 class="user-info user-email">You opted in for accountability: <%=@user.accountability_switch%></h2>
+  <h2 class="user-info user-email">Your accountability buddy's email: <%=@user.accountability_buddy_email %></h2>
+  <h2 class="user-info user-email">You wagered <%=@user.dollar_amount %> that you would complete <%=@user.workouts_per_week %> workouts per week </h2>
+</div>
+  <% end %>
+
 <div class="user-lifts-and-pic">
 <!-- take2 -->
   <img class="img-card" src="https://mbrooksfit.files.wordpress.com/2017/07/frontsquat.jpg?w=676"/>
