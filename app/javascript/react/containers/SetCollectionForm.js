@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import toast from '../components/toast';
+// import toast from '../components/toast';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import TextField from '../components/TextField'
