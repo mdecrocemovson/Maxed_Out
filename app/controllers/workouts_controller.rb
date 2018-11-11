@@ -15,6 +15,3 @@ class WorkoutsController < ApplicationController
     redirect_to workouts_path
   end
 end
-
-
-# AccountabilityWorker.perform_async(@current_user_email, @current_user_workouts_per_week, @current_user_buddy_email, @current_user_dollars)
