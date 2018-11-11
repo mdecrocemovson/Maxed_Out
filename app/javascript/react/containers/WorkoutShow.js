@@ -31,6 +31,14 @@ class WorkoutShow extends Component {
     this.checkDeadliftMax = this.checkDeadliftMax.bind(this)
     this.checkBenchMax = this.checkBenchMax.bind(this)
     this.checkSquatMax = this.checkSquatMax.bind(this)
+    this.handleSubmitNotification = this.handleSubmitNotification.bind(this)
+  }
+
+
+  handleSubmitNotification() {
+    swal({
+      title: "Great job adding a set!"
+    })
   }
 
   checkDeadliftMax(weight) {
@@ -107,12 +115,6 @@ class WorkoutShow extends Component {
   handleDeleteNotification() {
     swal({
       title: "You deleted a set!",
-    })
-  }
-
-  handleSubmitNotification() {
-    swal({
-      title: "Great job adding a set!"
     })
   }
 
