@@ -47,7 +47,7 @@ class WorkoutShow extends Component {
         title: "You beat your deadlift max! Nice!",
       })
     } else {
-      handleSubmitNotification()
+      this.handleSubmitNotification()
     }
   }
   checkBenchMax(weight) {
@@ -57,7 +57,7 @@ class WorkoutShow extends Component {
       })
     }
     else {
-      handleSubmitNotification()
+      this.handleSubmitNotification()
     }
   }
   checkSquatMax(weight) {
@@ -66,7 +66,7 @@ class WorkoutShow extends Component {
         title: "You beat your squat max! Nice!",
       })
     } else {
-      handleSubmitNotification()
+      this.handleSubmitNotification()
     }
   }
 
