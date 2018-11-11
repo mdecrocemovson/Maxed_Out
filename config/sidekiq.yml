@@ -1,4 +1,4 @@
-:schedule:
-  accountability_worker:
-    cron: '0 * * * * *'    # 'weekly' Runs every sunday at 00:00
-    class: AccountabilityWorker
+# # :schedule:
+#   accountability_worker:
+#     cron: '0 * * * * *'    # 'weekly' Runs every sunday at 00:00
+#     class: AccountabilityWorker

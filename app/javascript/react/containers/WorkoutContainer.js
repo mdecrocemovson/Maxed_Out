@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import FormContainer from './FormContainer'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-// import toast from '../components/toast';
 
 
 class WorkoutContainer extends Component {
@@ -56,18 +53,6 @@ class WorkoutContainer extends Component {
           addWorkout = {this.addWorkout}
           />
       </div>
-
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnVisibilityChange
-        draggable
-        pauseOnHover
-        />
       </div>
     )
   }

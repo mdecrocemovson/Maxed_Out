@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-// import toast from '../components/toast';
+import swal from 'sweetalert'
 
 import FormContainer from './FormContainer'
 import WorkoutDescription from '../components/WorkoutDescription'
@@ -37,50 +35,31 @@ class WorkoutShow extends Component {
 
   checkDeadliftMax(weight) {
     if (weight > this.state.user_deadlift_max){
-      toast.success(`Congrats on setting a new deadlift max at ${weight}! It's been updated in your profile!`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true
-      });
+      swal({
+        title: "You beat your deadlift max! Nice!",
+      })
+    } else {
+      handleSubmitNotification()
     }
   }
   checkBenchMax(weight) {
     if (weight > this.state.user_bp_max){
-      toast.success(`Congrats on setting a new bench max at ${weight}! It's been updated in your profile!`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true
-      });
+      swal({
+        title: "You beat your bench press max! Nice!",
+      })
+    }
+    else {
+      handleSubmitNotification()
     }
   }
   checkSquatMax(weight) {
     if (weight > this.state.user_squat_max){
-      toast.success(`Congrats on setting a new squat max at ${weight}! It's been updated in your profile!`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true
-      });
+      swal({
+        title: "You beat your squat max! Nice!",
+      })
+    } else {
+      handleSubmitNotification()
     }
-  }
-
-  handleSubmitNotification() {
-    toast.success('Set added!', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true
-    });
   }
 
   addSetCollection(setCollection) {
@@ -108,7 +87,7 @@ class WorkoutShow extends Component {
         this.setState({errors: body.errors})
       }
       else {
-        this.handleSubmitNotification()
+        // this.handleSubmitNotification()
         this.setState({user_bp_max: body.current_user.max_bench_press, user_squat_max: body.current_user.max_squat, user_deadlift_max: body.current_user.max_dead_lift})
         if (body.exercise_id == 1){
           this.checkBenchMax(body.weight)
@@ -126,25 +105,15 @@ class WorkoutShow extends Component {
   }
 
   handleDeleteNotification() {
-    toast.error('Sets deleted!', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true
-    });
+    swal({
+      title: "You deleted a set!",
+    })
   }
 
   handleSubmitNotification() {
-    toast.success('Set added!', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true
-    });
+    swal({
+      title: "Great job adding a set!"
+    })
   }
 
   handleSetCollectionDelete(id) {
@@ -217,17 +186,6 @@ class WorkoutShow extends Component {
           addSetCollection = {this.addSetCollection}
           user_id = {this.state.user_id}
           />
-          <ToastContainer
-            position="top-right"
-            autoClose={3000}
-            hideProgressBar
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnVisibilityChange
-            draggable
-            pauseOnHover
-            />
         </div>
       </div>
     )
