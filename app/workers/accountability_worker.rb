@@ -1,5 +1,4 @@
 require 'sidekiq-scheduler'
-require 'pry'
 
 
 class AccountabilityWorker
@@ -9,7 +8,6 @@ class AccountabilityWorker
 
 
   def perform
-    binding.pry
     retrieve_users_who_have_failed.each do |user|
       puts "sidekiq is working..."
       AccountabilityMailer.with(email: user.email, workouts: user.workouts_per_week, buddy_email: user.accountability_buddy_email, dollars: user.dollar_amount).new_email.deliver_later
