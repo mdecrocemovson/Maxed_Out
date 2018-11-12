@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Maxed Out</h1>
 <h4>(This was completed as a project while at Launch Academy to showcase my newfound abilities.)</h4>
 <p>Maxed out is a website for the average fitness enthusiast. Users can create workouts, add information about them (description, location, date), track their lifts (reps, sets, weight) and then see their progress over time. Additionally, the website serves as an accountability device. When a new user signs up, they can opt to participate in the accountability buddy system. When they do not complete a number of workouts per week, they will serve an email reminder to their accountability buddy describing a debt.</p>
@@ -40,6 +39,3 @@ $ bundle exec rspec
 <li><a href="https://www.npmjs.com/package/react-google-charts#installation">React Google Charts</a></li>
 <li><a href="https://github.com/mperham/sidekiq">Sidekiq</li></a>
 <li><a href="sidekiq scheduler">Sidekiq Scheduler </li></a>
-=======
-
->>>>>>> 2ad3183452e24186e0ef6ee102481e5c34877405
