@@ -105,4 +105,26 @@
 .signup-button {
   color: white;
   background-color: black;
+  text-align: center;
+  width: 150px;
+  text-align: center;
+  margin:0 auto;
+}
+
+.sign-up-logo {
+  font-size: 70px;
+}
+
+.sign-up-label {
+  color: #ffae19;
+  text-align: center;
+  font-size: 50px;
+}
+
+.sign-up-field {
+  width: 600px;
+  margin: auto;
+}
+.actions {
+  text-align: auto;
 }
