@@ -39,3 +39,10 @@ $ bundle exec rspec
 <li><a href="https://www.npmjs.com/package/react-google-charts#installation">React Google Charts</a></li>
 <li><a href="https://github.com/mperham/sidekiq">Sidekiq</li></a>
 <li><a href="sidekiq scheduler">Sidekiq Scheduler </li></a>
+</ul>
+
+<h3>Future (Dream) Features</h3>
+<ul>
+<li>I would like to pull from the myfitnesspal API to populate my list of exercises. Right now, the user can only record sets of bench press, squat, or deadlift. I'd like to expand this to reflect the wealth of different movements on the MFP database</li>
+<li>I would like to add capabilities for nutritional recording and caloric tracking, in collaboration with the workout tracking side of the site.</li>
+</ul>
