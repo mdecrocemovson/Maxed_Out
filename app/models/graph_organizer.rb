@@ -8,7 +8,6 @@ class GraphSerializer
 
     @current_user.exercises.each do |exercise|
       set_collection_data = @current_user.set_collections.where(exercise: exercise)
-      binding.pry
       data[:exercises] << {
         name: exercise.name,
         set_collections: set_collection_data
