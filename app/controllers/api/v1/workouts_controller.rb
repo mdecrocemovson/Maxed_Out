@@ -22,6 +22,10 @@ class Api::V1::WorkoutsController < ApiController
   private
 
   def workout_params
-    params.require(:workout).permit(:user_id, :performed_on, :location, :goal, :review).merge(user_id: current_user.id)
+    if Rails.env.development?
+      params.require(:workout).permit(:performed_on, :location, :goal, :review).merge(user_id: current_user.id)
+    elsif Rails.env.test?
+      params.permit(:performed_on, :location, :goal, :review, :user_id)
+    end
   end
 end

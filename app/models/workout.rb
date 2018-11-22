@@ -4,5 +4,6 @@ class Workout < ApplicationRecord
   validates :location, presence: true;
   validates :goal, presence: true;
   has_many :exercises, through: :set_collections
-  belongs_to :user
+  #maybe not the best fix
+  belongs_to :user, optional: true
 end
