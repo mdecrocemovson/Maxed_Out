@@ -7,7 +7,8 @@ class WorkoutContainer extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      workout: []
+      workout: [],
+      errors: ""
     }
     this.addWorkout = this.addWorkout.bind(this)
   }
@@ -34,21 +35,31 @@ class WorkoutContainer extends Component {
     })
     .then (response => response.json())
     .then(body => {
-      this.setState({workout: body})
-      browserHistory.push(`/workouts/${body.id}`)
+      if (Array.isArray(body)) {
+        let errors;
+        errors = body.join(", ")
+        this.setState({errors: errors})
+      } else {
+        this.setState({workout: body})
+        browserHistory.push(`/workouts/${body.id}`)
+      }
     })
 
   }
 
   render() {
+    let errors;
+    if (this.state.errors!=""){
+      errors = <h3 id="errors">Please see the following errors: {this.state.errors}</h3>
+    }
     return (
       <div>
-
       <div>
         <h1 className="workout-banner"> Let's track a workout! </h1>
           <div className="holley">
           </div>
           <br/>
+          {errors}
         <FormContainer
           addWorkout = {this.addWorkout}
           />
