@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormContainer from './FormContainer'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import swal from 'sweetalert'
 
 
 class WorkoutContainer extends Component {
@@ -38,6 +39,11 @@ class WorkoutContainer extends Component {
       if (Array.isArray(body)) {
         let errors;
         errors = body.join(", ")
+        swal({
+          title: "please see the following errors: " + errors,
+          icon: "error",
+
+        })
         this.setState({errors: errors})
       } else {
         this.setState({workout: body})
@@ -48,10 +54,6 @@ class WorkoutContainer extends Component {
   }
 
   render() {
-    let errors;
-    if (this.state.errors!=""){
-      errors = <h3 id="errors">Please see the following errors: {this.state.errors}</h3>
-    }
     return (
       <div>
       <div>
@@ -59,7 +61,6 @@ class WorkoutContainer extends Component {
           <div className="holley">
           </div>
           <br/>
-          {errors}
         <FormContainer
           addWorkout = {this.addWorkout}
           />
